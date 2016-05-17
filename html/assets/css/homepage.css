@@ -298,15 +298,14 @@
  }
  
  .checking .form-group label {
-   font-size: 22px;
+   font-size: 16px;
    margin: 5px;
+   font-weight: 100;
  }
  
  .checking button.form-control {
-   margin-top: 41px;
+   margin-top: 33px;
    color: #fff;
-   font-size: 22px;
-   padding: 3px;
  }
  /*************************/
  /*********SERVICE*********/
@@ -333,6 +332,8 @@
    margin: 0;
    border-bottom: 1px solid #DADADA;
    font-size: 1.2em;
+   padding-right: 35px;
+   position: relative;
  }
  
  .sc-item-title i {
@@ -341,6 +342,12 @@
  
  .control-caret {
    cursor: pointer;
+   position: absolute;
+   right: 4px;
+   top: 0;
+   bottom: 0;
+   margin: auto;
+   display: table;
  }
  
  .sc-item-description {
@@ -498,6 +505,7 @@
  .event-thumbnail img {
    width: 100%;
    height: 100%;
+   min-height: 100px;
  }
  
  .slider-category {
@@ -519,6 +527,7 @@
    margin: 2px;
    overflow: hidden;
    padding-bottom: 0;
+   min-height: 100px;
  }
  
  .slick-slider {
@@ -785,4 +794,10 @@
    width: 75px;
    margin: 10px 10px 0px 0px;
    float: left;
+ }
+ 
+ .album-image img {
+   width: 75px;
+   margin: 5px 0 0;
+   height: 75px;
  }
