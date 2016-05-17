@@ -8,8 +8,11 @@
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Montserrat%3Aregular%2C700&#038;subset=latin&#038;ver=4.3.4' type='text/css' media='all' />
+  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&#038;subset=greek%2Ccyrillic-ext%2Ccyrillic%2Clatin%2Clatin-ext%2Cvietnamese%2Cgreek-ext&#038;ver=4.3.4' type='text/css' media='all' />
   <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/homepage.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 </head>
 
 <body>
@@ -24,10 +27,17 @@
         <a href="#" class="navbar-brand">
           <img src="assets/images/ss-logo-footer.png"></a>
       </div>
-      <nav id="sh-main-navbar" class="collapse navbar-collapse">
+      <nav id="sh-main-navbar" class="collapse navbar-collapse sh-main-navbar">
         <ul class="nav navbar-nav navbar-right">
-          <li> <a href="#">List your space</a> </li>
-          <li> <a href="#">Service</a> </li>
+          <li> <a href="#">List your space</a>
+          </li>
+          <li class="dropdown"> <a href="#" data-toggle="dropdown">Service    <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">LIVE</a> </li>
+              <li><a href="#">PLAY & WORK</a> </li>
+              <li><a href="#">SUPPORT</a> </li>
+            </ul>
+          </li>
           <li> <a href="#">Blog</a> </li>
           <li> <a href="#">Support</a> </li>
           <li> <a href="#">Account</a> </li>
@@ -118,50 +128,74 @@
                     <ul class="service-list list-unstyled">
                       <li class="service-item">
                         <h6 class="sc-item-title">
-                          <i class="fa fa-user"></i>
-                          Abc 
+                          <i class="fa fa-file-text-o"></i>
+                          Personal Contract
                           <span class="control-caret pull-right"> 
                           <i class="fa fa-plus"></i>
                           </span>
                         </h6>
                         <div class="sc-item-description">
-                          sdsdsds
+                          Each room have its own contract which is independent from the whole flat. No matter how many person sharing the flat, you pay the same price for all the contract duration.
                         </div>
                       </li>
                       <li class="service-item">
                         <h6 class="sc-item-title">
-                          <i class="fa fa-user"></i>
-                          Abc 
+                          <i class="fa fa-pie-chart"></i>
+                          Bills Management 
                           <span class="control-caret pull-right"> 
                           <i class="fa fa-plus"></i>
                           </span>
                         </h6>
                         <div class="sc-item-description">
-                          sdsdsds
+                          You won’t ever have to worry about managing your bills for your flat; every month you will receive only one bill with your equally-shared part of expenses and charges.
                         </div>
                       </li>
                       <li class="service-item">
                         <h6 class="sc-item-title">
-                          <i class="fa fa-user"></i>
-                          Abc 
+                          <i class="fa fa-recycle"></i>
+                          Cleaning Service 
                           <span class="control-caret pull-right"> 
                           <i class="fa fa-plus"></i>
                           </span>
                         </h6>
                         <div class="sc-item-description">
-                          sdsdsds
+                          We offer a 3 times/week cleaning service for all common areas of the flat (kitchen, bathroom, living room, etc.) with the option of a custom cleaning of bedrooms, washing and ironing clothes upon request!
                         </div>
                       </li>
                       <li class="service-item">
                         <h6 class="sc-item-title">
-                          <i class="fa fa-user"></i>
-                          Abc 
+                          <i class="fa fa-signal"></i>
+                          Fully furnished 
                           <span class="control-caret pull-right"> 
                           <i class="fa fa-plus"></i>
                           </span>
                         </h6>
                         <div class="sc-item-description">
-                          sdsdsds
+                          All of our flats are fully furnished. From a desk, bed and wardrobe, washing machine to multiples Internet routers accessible from everywhere and a fully equipped kitchen.
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-plug"></i>
+                          Local Support
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          We have your maintenance needs covered with our technical team. Moreover, as part of the community, you will have access to our best deal in term of travelling and restaurant. Last but not least, we provide to our tenants, the internship and job placement service to provide the best local experiences ever.
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-users"></i>
+                          Very Good Ambience
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          We organize trips and events to make you and your housemates join our international community from others flatshares.
                         </div>
                       </li>
                     </ul>
@@ -174,49 +208,13 @@
                       <li class="service-item">
                         <h6 class="sc-item-title">
                           <i class="fa fa-user"></i>
-                          Abc 
+                          Event & intership 
                           <span class="control-caret pull-right"> 
                           <i class="fa fa-plus"></i>
                           </span>
                         </h6>
                         <div class="sc-item-description">
-                          sdsdsds
-                        </div>
-                      </li>
-                      <li class="service-item">
-                        <h6 class="sc-item-title">
-                          <i class="fa fa-user"></i>
-                          Abc 
-                          <span class="control-caret pull-right"> 
-                          <i class="fa fa-plus"></i>
-                          </span>
-                        </h6>
-                        <div class="sc-item-description">
-                          sdsdsds
-                        </div>
-                      </li>
-                      <li class="service-item">
-                        <h6 class="sc-item-title">
-                          <i class="fa fa-user"></i>
-                          Abc 
-                          <span class="control-caret pull-right"> 
-                          <i class="fa fa-plus"></i>
-                          </span>
-                        </h6>
-                        <div class="sc-item-description">
-                          sdsdsds
-                        </div>
-                      </li>
-                      <li class="service-item">
-                        <h6 class="sc-item-title">
-                          <i class="fa fa-user"></i>
-                          Abc 
-                          <span class="control-caret pull-right"> 
-                          <i class="fa fa-plus"></i>
-                          </span>
-                        </h6>
-                        <div class="sc-item-description">
-                          sdsdsds
+                          updating....
                         </div>
                       </li>
                     </ul>
@@ -228,50 +226,50 @@
                     <ul class="service-list list-unstyled">
                       <li class="service-item">
                         <h6 class="sc-item-title">
-                          <i class="fa fa-user"></i>
-                          Abc 
+                          <i class="fa fa-file-text"></i>
+                          Documenttation 
                           <span class="control-caret pull-right"> 
                           <i class="fa fa-plus"></i>
                           </span>
                         </h6>
                         <div class="sc-item-description">
-                          sdsdsds
+                          updating....
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-list-alt"></i>
+                          FAQ 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          updating....
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-home"></i>
+                          House 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          updating....
                         </div>
                       </li>
                       <li class="service-item">
                         <h6 class="sc-item-title">
                           <i class="fa fa-user"></i>
-                          Abc 
+                          Personal service 
                           <span class="control-caret pull-right"> 
                           <i class="fa fa-plus"></i>
                           </span>
                         </h6>
                         <div class="sc-item-description">
-                          sdsdsds
-                        </div>
-                      </li>
-                      <li class="service-item">
-                        <h6 class="sc-item-title">
-                          <i class="fa fa-user"></i>
-                          Abc 
-                          <span class="control-caret pull-right"> 
-                          <i class="fa fa-plus"></i>
-                          </span>
-                        </h6>
-                        <div class="sc-item-description">
-                          sdsdsds
-                        </div>
-                      </li>
-                      <li class="service-item">
-                        <h6 class="sc-item-title">
-                          <i class="fa fa-user"></i>
-                          Abc 
-                          <span class="control-caret pull-right"> 
-                          <i class="fa fa-plus"></i>
-                          </span>
-                        </h6>
-                        <div class="sc-item-description">
-                          sdsdsds
+                          updating....
                         </div>
                       </li>
                     </ul>
@@ -292,7 +290,7 @@
             </div>
             <div class="panel-body">
               <div class="row">
-                <div class="col-md-9 location-item ">
+                <div class="col-md-9 col-xs-9 location-item ">
                   <div class="location-inner wow bounceIn" data-wow-duration="2.5s" data-wow-delay="700ms">
                     <div class="location-thumbnail">
                       <img src="assets/images/default.png">
@@ -302,7 +300,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-3  location-item ">
+                <div class="col-md-3 col-xs-3  location-item ">
                   <div class="location-inner  wow bounceIn" data-wow-duration="2.3s" data-wow-delay="700ms">
                     <div class="location-thumbnail">
                       <img src="assets/images/default.png">
@@ -312,7 +310,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4  location-item ">
+                <div class="col-md-4 col-xs-4  location-item ">
                   <div class="location-inner  wow bounceInUp" data-wow-duration="2.3s" data-wow-delay="700ms">
                     <div class="location-thumbnail">
                       <img src="assets/images/default.png">
@@ -322,7 +320,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4  location-item ">
+                <div class="col-md-4  col-xs-4  location-item ">
                   <div class="location-inner  wow bounceInUp" data-wow-duration="2.6s" data-wow-delay="700ms">
                     <div class="location-thumbnail">
                       <img src="assets/images/default.png">
@@ -332,7 +330,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4  location-item ">
+                <div class="col-md-4  col-xs-4  location-item ">
                   <div class="location-inner  wow bounceInUp" data-wow-duration="3s" data-wow-delay="700ms">
                     <div class="location-thumbnail">
                       <img src="assets/images/default.png">
@@ -575,7 +573,7 @@
                     </div>
                   </div>
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-4 event-right">
                   <div class="row  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
                     <div class="col-md-6 event-item">
                       <div class="event-inner">
@@ -715,23 +713,24 @@
               <div class="widget-inner">
                 <p> Phone: +84 938 938 837</p>
                 <p>Email: simsymteam@gmail.com</p>
-                <ul class="list-unstyled list-inline list-social">
-                  <li>
-                    <a href="#" target="_blank"><i class="fa fa-facebook"></i> </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank"><i class="fa fa-twitter"></i> </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i> </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank"><i class="fa fa-youtube-play"></i> </a>
-                  </li>
-                  <li>
-                    <a href="#" target="_blank"><i class="fa fa-instagram"></i> </a>
-                  </li>
               </div>
+              <ul class="list-unstyled list-inline list-social">
+                <li>
+                  <a href="#" target="_blank"><i class="fa fa-facebook"></i> </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"><i class="fa fa-twitter"></i> </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"><i class="fa fa-linkedin"></i> </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"><i class="fa fa-youtube-play"></i> </a>
+                </li>
+                <li>
+                  <a href="#" target="_blank"><i class="fa fa-instagram"></i> </a>
+                </li>
+              </ul>
             </div>
             <div class="col-md-3 sh-widget">
               <h3 class="widget-title">

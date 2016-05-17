@@ -1,0 +1,47 @@
+@media screen and (max-width: 786px) {
+  .sh-main-navbar {
+    background: rgba(0, 0, 0, 0.15);
+  }
+  .sh-main-navbar .nav li {
+    text-align: center;
+    border-bottom: 1px solid;
+  }
+  body header .sh-main-navbar .nav li:not(:first-child) {
+    border-top: 0;
+  }
+  .content .slider-video,
+  .content .video-control {
+    height: auto;
+  }
+  .slider-player video {
+    width: 100%;
+    height: 100%;
+    background: #ffffff
+  }
+  footer .sh-widget{
+    text-align: center;
+    float: left;
+    width: 100%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.16);
+  }
+  footer .sh-widget:last-child{
+  	border-bottom: 0;
+  }
+  .sh-widget ul{
+  	margin: auto;
+  }
+  .sh-widget ul li{
+  	float: none;
+  }
+  .location-thumbnail img{
+  	height: 200px;
+  } 
+}
+@media screen and (max-width: 480px) {
+	.location-item{
+		width: 100%;
+	}
+	.location-thumbnail img{
+		height: 150px;
+	}
+}
