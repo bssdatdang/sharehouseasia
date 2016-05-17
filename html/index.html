@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Sharehouse template html bootstrap</title>
+  <meta charset="utf-8">
+  <!--Import lib css-->
+  <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/homepage.css">
+</head>
+
+<body>
+  <div class="sharehouse-site">
+    <header>
+      <div class="navbar-header">
+        <button class="navbar-toggle collapsed" data-toggle="collapse" data-target="#sh-main-navbar">
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">
+          <img src="assets/images/ss-logo-footer.png"></a>
+      </div>
+      <nav id="sh-main-navbar" class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li> <a href="#">List your space</a> </li>
+          <li> <a href="#">Service</a> </li>
+          <li> <a href="#">Blog</a> </li>
+          <li> <a href="#">Support</a> </li>
+          <li> <a href="#">Account</a> </li>
+        </ul>
+      </nav>
+    </header>
+    <div class="content ">
+      <div class="slider-video" id="slider-video">
+        <div class="slider-inner">
+          <div class="slider-background video-control" aria-hidden="false">
+            <video preload="auto" loop="loop" id="slider-video-main" class="video-playing" autoplay>
+              <source src="https://a0.muscache.com/airbnb/static/P1-background-vid-compressed-2.mp4" type="video/mp4">
+              <source src="https://a0.muscache.com/airbnb/static/P1-background-vid-compressed-2.webm" type="video/webm">
+            </video>
+            <div class="overlay">
+            </div>
+            <div class="video-caption">
+              <h2 class="text-branding text-jumbo text-contrast"> Live There </h2>
+              <p class="text-contrast"> Book homes from local hosts in 191+ countries and experience a place like you live there. </p>
+              <a href="#" class="btn btn-circle  btn-play" data-video="slider-video-main"><i class="fa fa-play-circle" ></i></a>
+            </div>
+          </div>
+          <div class="slider-player  video-control" aria-hidden="true">
+            <video preload="auto" loop="loop" id="slider-video-player" class="video-playing">
+              <source src="https://a0.muscache.com/airbnb/static/US_60_ANTHEM.mp4" type="video/mp4">
+              <source src="https://a0.muscache.com/airbnb/static/US_60_ANTHEM.webm" type="video/webm">
+            </video>
+            <span class="btn-close "><i class="fa fa-remove"></i></span>
+            <div class="video-caption">
+              <a href="#" class="btn btn-circle  btn-play" data-video="slider-video-player"><i class="fa fa-play-circle" ></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Start Box Check Availablity-->
+      <div class="checking box even" id="checking">
+        <div class="box-inner panel panel-default">
+          <div class="container">
+            <div class="panel-heading   wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="500ms">
+              <h3 class="panel-title">FIND A ROOM FOR YOUR ARRIVAL DATE</h3>
+            </div>
+            <div class="panel-body">
+              <form class="form-check-available" method="post" action="#">
+                <div class="form-group">
+                  <div class="row">
+                    <div class="col-md-3   wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="500ms">
+                      <label for="date-check-in">Area</label>
+                      <select class="form-control">
+                        <option value="1">North Binh Thanh District</option>
+                        <option value="1">North Binh Thanh District</option>
+                        <option value="1">North Binh Thanh District</option>
+                        <option value="1">North Binh Thanh District</option>
+                      </select>
+                    </div>
+                    <div class="col-md-2  wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="700ms">
+                      <label for="date-check-in">Check In</label>
+                      <input type="text" class="form-control date-check-in" id="date-check-in" name="">
+                    </div>
+                    <div class="col-md-2 wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="900ms">
+                      <label for="date-check-out">Check In</label>
+                      <input type="text" class="form-control date-check-out" id="date-check-out" name="">
+                    </div>
+                    <div class="col-md-5 wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="1100ms">
+                      <button class="btn btn-success form-control">
+                        Check availablity
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/End Box Check Availablity-->
+      <!--Start Box Service-->
+      <div class="service box odd" id="service">
+        <div class="box-inner panel panel-default">
+          <div class="container">
+            <div class="panel-heading  wow bounce" data-wow-duration="0.9s" data-wow-delay="700ms">
+              <h3 class="panel-title">Service</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-4">
+                  <div class="service-inner wow fadeIn" data-wow-duration="0.9s" data-wow-delay="700ms">
+                    <h4 class="service-title">Live</h4>
+                    <ul class="service-list list-unstyled">
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="service-inner wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+                    <h4 class="service-title">Play & Work</h4>
+                    <ul class="service-list list-unstyled">
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="col-md-4 ">
+                  <div class="service-inner wow fadeIn" data-wow-duration="0.9s" data-wow-delay="700ms">
+                    <h4 class="service-title">Support</h4>
+                    <ul class="service-list list-unstyled">
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                      <li class="service-item">
+                        <h6 class="sc-item-title">
+                          <i class="fa fa-user"></i>
+                          Abc 
+                          <span class="control-caret pull-right"> 
+                          <i class="fa fa-plus"></i>
+                          </span>
+                        </h6>
+                        <div class="sc-item-description">
+                          sdsdsds
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/End Box Check Availablity-->
+      <!--Start Box Location-->
+      <div class="location box even" id="checking">
+        <div class="box-inner panel panel-default">
+          <div class="container">
+            <div class="panel-heading wow bounceIn" data-wow-duration="0.9s" data-wow-delay="700ms">
+              <h3 class="panel-title">Location</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-9 location-item ">
+                  <div class="location-inner wow bounceIn" data-wow-duration="2.5s" data-wow-delay="700ms">
+                    <div class="location-thumbnail">
+                      <img src="assets/images/default.png">
+                    </div>
+                    <div class="location-info">
+                      <a href="#">North Binh Thanh</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-3  location-item ">
+                  <div class="location-inner  wow bounceIn" data-wow-duration="2.3s" data-wow-delay="700ms">
+                    <div class="location-thumbnail">
+                      <img src="assets/images/default.png">
+                    </div>
+                    <div class="location-info">
+                      <a href="#">North Binh Thanh</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4  location-item ">
+                  <div class="location-inner  wow bounceInUp" data-wow-duration="2.3s" data-wow-delay="700ms">
+                    <div class="location-thumbnail">
+                      <img src="assets/images/default.png">
+                    </div>
+                    <div class="location-info">
+                      <a href="#">North Binh Thanh</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4  location-item ">
+                  <div class="location-inner  wow bounceInUp" data-wow-duration="2.6s" data-wow-delay="700ms">
+                    <div class="location-thumbnail">
+                      <img src="assets/images/default.png">
+                    </div>
+                    <div class="location-info">
+                      <a href="#">North Binh Thanh</a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4  location-item ">
+                  <div class="location-inner  wow bounceInUp" data-wow-duration="3s" data-wow-delay="700ms">
+                    <div class="location-thumbnail">
+                      <img src="assets/images/default.png">
+                    </div>
+                    <div class="location-info">
+                      <a href="#">North Binh Thanh</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/End Box Location-->
+      <!--Start Box Event-->
+      <div class="event box odd" id="event">
+        <div class="box-inner panel panel-default">
+          <div class="container">
+            <div class="panel-heading  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+              <h3 class="panel-title">Event</h3>
+            </div>
+            <div class="panel-body">
+              <div class="row">
+                <div class="col-md-8">
+                  <div class="slider-category  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+                    <div class="slider slider-for">
+                      <div class="slider-category-item">
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc  1</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc 2</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc 3</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slider-category-item">
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc  1 - 2</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc 2 - 2</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc 3 - 2</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slider-category-item">
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc  1 - 3</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc 2 - 3</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc 3 - 3</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slider-category-item">
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc  1 - 4</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc 2 - 4</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc 3 - 4</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="slider-category-item">
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc  1 - 5</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc 2 - 5</a>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="event-item">
+                          <div class="event-inner">
+                            <div class="event-thumbnail">
+                              <img src="assets/images/default.png">
+                            </div>
+                            <div class="event-info">
+                              <a href="#"> ABC abc 3 - 5</a>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="slider slider-nav">
+                      <div class="event-item">
+                        <div class="event-inner">
+                          <div class="event-thumbnail">
+                            <img src="assets/images/default.png">
+                          </div>
+                          <div class="event-info">
+                            <a href="#"> cate 1</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="event-item">
+                        <div class="event-inner">
+                          <div class="event-thumbnail">
+                            <img src="assets/images/default.png">
+                          </div>
+                          <div class="event-info">
+                            <a href="#"> cate 2</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="event-item">
+                        <div class="event-inner">
+                          <div class="event-thumbnail">
+                            <img src="assets/images/default.png">
+                          </div>
+                          <div class="event-info">
+                            <a href="#">  cate 3</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="event-item">
+                        <div class="event-inner">
+                          <div class="event-thumbnail">
+                            <img src="assets/images/default.png">
+                          </div>
+                          <div class="event-info">
+                            <a href="#">  cate 4</a>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="event-item">
+                        <div class="event-inner">
+                          <div class="event-thumbnail">
+                            <img src="assets/images/default.png">
+                          </div>
+                          <div class="event-info">
+                            <a href="#">  cate 5</a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4">
+                  <div class="row  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+                    <div class="col-md-6 event-item">
+                      <div class="event-inner">
+                        <div class="event-thumbnail">
+                          <img src="assets/images/default.png">
+                        </div>
+                        <div class="event-info">
+                          <a href="#"> ABC abc </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 event-item">
+                      <div class="event-inner">
+                        <div class="event-thumbnail">
+                          <img src="assets/images/default.png">
+                        </div>
+                        <div class="event-info">
+                          <a href="#"> ABC abc </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 event-item">
+                      <div class="event-inner">
+                        <div class="event-thumbnail">
+                          <img src="assets/images/default.png">
+                        </div>
+                        <div class="event-info">
+                          <a href="#"> ABC abc </a>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 event-item">
+                      <div class="event-inner">
+                        <div class="event-thumbnail">
+                          <img src="assets/images/default.png">
+                        </div>
+                        <div class="event-info">
+                          <a href="#"> ABC abc </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/End Box Event-->
+      <!--Start Box Testimonial-->
+      <div class="testimonial box even" id="testimonial">
+        <div class="box-inner panel panel-default">
+          <div class="container">
+            <div class="panel-heading  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+              <h3 class="panel-title">What Client Say</h3>
+            </div>
+            <div class="panel-body">
+              <div class="list-testimonials  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+                <div class="testimonial-item">
+                  <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+                  <p class="testimonial-author">Tâm Nguyễn - TP.HCM - <a href="#">www.mobigo.vn</a> </p>
+                </div>
+                <div class="testimonial-item">
+                  <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+                  <p class="testimonial-author">Tâm Nguyễn - TP.HCM - <a href="#">www.mobigo.vn</a> </p>
+                </div>
+                <div class="testimonial-item">
+                  <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+                  <p class="testimonial-author">Tâm Nguyễn - TP.HCM - <a href="#">www.mobigo.vn</a> </p>
+                </div>
+                <div class="testimonial-item">
+                  <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+                  <p class="testimonial-author">Tâm Nguyễn - TP.HCM - <a href="#">www.mobigo.vn</a> </p>
+                </div>
+                <div class="testimonial-item">
+                  <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+                  <p class="testimonial-author">Tâm Nguyễn - TP.HCM - <a href="#">www.mobigo.vn</a> </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/End Box Client Say-->
+      <!--Start Box Client-->
+      <div class="client box odd" id="client">
+        <div class="box-inner panel panel-default">
+          <div class="container">
+            <div class="panel-heading  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+              <h3 class="panel-title">Client</h3>
+            </div>
+            <div class="panel-body">
+              <div class="brands  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+                <div class="brand-item">
+                  <a href="#"><img src="assets/images/default.png"></a>
+                </div>
+                <div class="brand-item">
+                  <a href="#"><img src="assets/images/default.png"></a>
+                </div>
+                <div class="brand-item">
+                  <a href="#"><img src="assets/images/default.png"></a>
+                </div>
+                <div class="brand-item">
+                  <a href="#"><img src="assets/images/default.png"></a>
+                </div>
+                <div class="brand-item">
+                  <a href="#"><img src="assets/images/default.png"></a>
+                </div>
+                <div class="brand-item">
+                  <a href="#"><img src="assets/images/default.png"></a>
+                </div>
+                <div class="brand-item">
+                  <a href="#"><img src="assets/images/default.png"></a>
+                </div>
+                <div class="brand-item">
+                  <a href="#"><img src="assets/images/default.png"></a>
+                </div>
+                <div class="brand-item">
+                  <a href="#"><img src="assets/images/default.png"></a>
+                </div>
+                <div class="brand-item">
+                  <a href="#"><img src="assets/images/default.png"></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--/End Box Client-->
+    </div>
+    <footer>
+      <div class="footer-top">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-3 sh-widget">
+              <img src="assets/images/ss-logo-footer.png">
+              <div class="widget-inner">
+                <p> Phone: +84 938 938 837</p>
+                <p>Email: simsymteam@gmail.com</p>
+                <ul class="list-unstyled list-inline list-social">
+                  <li>
+                    <a href="#" target="_blank"><i class="fa fa-facebook"></i> </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank"><i class="fa fa-twitter"></i> </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank"><i class="fa fa-linkedin"></i> </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank"><i class="fa fa-youtube-play"></i> </a>
+                  </li>
+                  <li>
+                    <a href="#" target="_blank"><i class="fa fa-instagram"></i> </a>
+                  </li>
+              </div>
+            </div>
+            <div class="col-md-3 sh-widget">
+              <h3 class="widget-title">
+                LATEST FROM OUR BLOG
+              </h3>
+              <div class="widget-inner">
+                <ul>
+                  <li>
+                    <a href="#">ĐỂ CÓ MỘT TRANG WEBSITE ĐẸP VÀ CHUYÊN NGHIỆP</a>
+                    <span class="post-date">February 23, 2016</span>
+                  </li>
+                  <li>
+                    <a href="#">5 MẸO THIẾT KẾ MỘT LOGO ĐẸP</a>
+                    <span class="post-date">February 18, 2016</span>
+                  </li>
+                  <li>
+                    <a href="#">TẦM QUAN TRỌNG CỦA NHẬN DIỆN THƯƠNG HIỆU</a>
+                    <span class="post-date">January 24, 2016</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 sh-widget">
+              <h3 class="widget-title">
+                MORE LINK
+              </h3>
+              <div class="widget-inner">
+                <ul>
+                  <li>
+                    <a href="#">LAST WORK</a>
+                  </li>
+                  <li>
+                    <a href="#">CONTACT US</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-md-3 sh-widget">
+              <h3 class="widget-title">
+                PHOTO STREAM
+              </h3>
+              <div class="widget-inner">
+                <div class="album-image">
+                  <script type="text/javascript" src="http://www.flickr.com/badge_code_v2.gne?count=6&amp;display=latest&amp;size=s&amp;layout=x&amp;source=user&amp;user=71865026@N00"></script>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="footer-bottom">
+          <p><strong>Join Us</strong></p>
+          <ul class="list-unstyled list-inline list-social">
+            <li>
+              <a href="#" target="_blank"><i class="fa fa-facebook"></i> </a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="fa  fa-google-plus"></i> </a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="fa fa-twitter"></i> </a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="fa fa-linkedin"></i> </a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="fa fa-pinterest"></i> </a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="fa fa-youtube-play"></i> </a>
+            </li>
+            <li>
+              <a href="#" target="_blank"><i class="fa fa-instagram"></i> </a>
+            </li>
+          </ul>
+          <p class="copyright">
+            &copy; sharehouse 2016
+          </p>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <a href="#" class="backtop"><i class="fa fa-arrow-up"></i></a>
+  <!--Import lib javascript-->
+  <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
+  <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
+  <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script type="text/javascript" src="assets/js/datepicker.min.js"></script>
+  <script type="text/javascript" src="assets/js/slick.min.js"></script>
+  <script type="text/javascript" src="assets/js/wow.js"></script>
+  <script type="text/javascript" src="assets/js/homepage.js"></script>
+</body>
+
+</html>
