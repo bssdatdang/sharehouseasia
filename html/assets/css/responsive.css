@@ -36,6 +36,13 @@
   .location-thumbnail img{
   	height: 200px;
   } 
+   .navbar-collapse.in {
+    background: #8c6b4b;
+  }
+  .img-logo img{
+    height: 95px;
+    margin-left: 0px;
+  }
 }
 @media only screen and (max-width: 480px) {
 	.location-item{
@@ -44,4 +51,11 @@
 	.location-thumbnail img{
 		height: 150px;
 	}
+  .navbar-collapse.in {
+    background: #8c6b4b;
+}
+.img-logo img{
+  height: 55px;
+  margin-left: 0px;
+}
 }
