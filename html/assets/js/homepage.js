@@ -91,19 +91,19 @@
       breakpoint: 1024,
       settings: {
         slidesToShow: 4,
-        slidesToScroll: 4, 
+        slidesToScroll: 4,
       }
     }, {
       breakpoint: 786,
       settings: {
         slidesToShow: 3,
-        slidesToScroll: 3, 
+        slidesToScroll: 3,
       }
     }, {
       breakpoint: 500,
       settings: {
         slidesToShow: 2,
-        slidesToScroll: 2, 
+        slidesToScroll: 2,
       }
     }]
   });
@@ -175,11 +175,25 @@
       scrollTop: 0
     }, 1000);
   });
-  $('.sh-main-navbar ul li.dropdown').hover(function() {
+
+  $('.sh-main-navbar >ul >li.dropdown').hover(function() {
     $(this).addClass('open');
   }, function() {
     $(this).removeClass('open');
   });
+
+  $(".dropdown-menu > li > a.sub-menu-item").on("click", function(e) {
+    var current = $(this).next();
+    var grandparent = $(this).parent().parent();
+    grandparent.find(".sub-menu:visible").not(current).hide();
+    current.toggle();
+    e.stopPropagation();
+  });
+
+  $(".dropdown-menu > li > a:not(.sub-menu-item)").on("click", function() {
+    var root = $(this).closest('.dropdown');
+    root.find('.sub-menu:visible').hide();
+  }); 
   new WOW().init();
 })(jQuery);
 
