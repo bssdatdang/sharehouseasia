@@ -18,7 +18,16 @@
     dateFormat: 'dd/mm/yy',
     minDate: new Date(currentYear1, currentMonth1, currentDate1)
   });
+  /*
+  $('.date-check-in').daterangepicker();
 
+  $('.date-check-out').on('focus', function() {
+    $('.date-check-in').trigger('click');
+  })
+
+  $('.date-check-out').on('click', function() {
+    $('.date-check-in').trigger('click');
+  })*/
 
   $('.slider-background  .btn-play').on('click', function() {
     var v = $(this).data('video'),
@@ -108,6 +117,23 @@
     }]
   });
 
+/*Aldum SLIDER*/
+  $('.images-slider-for').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: true,
+    fade: true,
+    asNavFor: '.images-slider-nav'
+  });
+$('.images-slider-nav').slick({
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    asNavFor: '.images-slider-for',
+    dots: false,
+    arrows: false,
+    centerMode: true,
+    focusOnSelect: true });
+
   $('.slider-category-item').slick({
     dots: false,
   });
@@ -181,19 +207,19 @@
   }, function() {
     $(this).removeClass('open');
   });
-  
-  $(".dropdown-menu > li > a.sub-menu-item").on("click",function(e){
-    var current=$(this).next();
-    var grandparent=$(this).parent().parent();
-    if($(this).hasClass('left-caret')||$(this).hasClass('right-caret'))
+
+  $(".dropdown-menu > li > a.sub-menu-item").on("click", function(e) {
+    var current = $(this).next();
+    var grandparent = $(this).parent().parent();
+    if ($(this).hasClass('left-caret') || $(this).hasClass('right-caret'))
       $(this).toggleClass('right-caret left-caret');
     grandparent.find('.left-caret').not(this).toggleClass('right-caret left-caret');
     grandparent.find(".sub-menu:visible").not(current).hide();
     current.toggle();
     e.stopPropagation();
   });
-  $(".dropdown-menu > li > a:not(.sub-menu-item)").on("click",function(){
-    var root=$(this).closest('.dropdown');
+  $(".dropdown-menu > li > a:not(.sub-menu-item)").on("click", function() {
+    var root = $(this).closest('.dropdown');
     root.find('.left-caret').toggleClass('right-caret left-caret');
     root.find('.sub-menu:visible').hide();
   });
