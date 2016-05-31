@@ -15,4 +15,4 @@
  * @version     2.0.0
  */
 ?>
-<div class="box-product">
+<ul class="products">

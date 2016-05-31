@@ -48,17 +48,46 @@ if ( 0 === $woocommerce_loop['loop'] % $woocommerce_loop['columns'] ) {
 	$classes[] = 'last';
 }
 ?>
-<div class="wrap  item-product">
-	<div class="struct">
-		<div class="frame">
-			<a href="<?php echo the_permalink()?>" class="image" title="<?php the_title()?>"><?php the_post_thumbnail() ?> </a>
-			<div class="name"><a title="<?php the_title()?>"  href="<?php echo the_permalink()?>"><?php the_title()?></a> </div> 
-		</div>   
-		<div class="frame-expert">
-		<?php   
-			 echo thanhcong_content(50)
-			?> 
-		</div>
-	</div>
-	<div class="ProductZoom"> </div>
-</div> 
+<li <?php post_class( $classes ); ?>>
+
+	<?php
+	/**
+	 * woocommerce_before_shop_loop_item hook.
+	 *
+	 * @hooked woocommerce_template_loop_product_link_open - 10
+	 */
+	do_action( 'woocommerce_before_shop_loop_item' );
+
+	/**
+	 * woocommerce_before_shop_loop_item_title hook.
+	 *
+	 * @hooked woocommerce_show_product_loop_sale_flash - 10
+	 * @hooked woocommerce_template_loop_product_thumbnail - 10
+	 */
+	do_action( 'woocommerce_before_shop_loop_item_title' );
+
+	/**
+	 * woocommerce_shop_loop_item_title hook.
+	 *
+	 * @hooked woocommerce_template_loop_product_title - 10
+	 */
+	do_action( 'woocommerce_shop_loop_item_title' );
+
+	/**
+	 * woocommerce_after_shop_loop_item_title hook.
+	 *
+	 * @hooked woocommerce_template_loop_rating - 5
+	 * @hooked woocommerce_template_loop_price - 10
+	 */
+	do_action( 'woocommerce_after_shop_loop_item_title' );
+
+	/**
+	 * woocommerce_after_shop_loop_item hook.
+	 *
+	 * @hooked woocommerce_template_loop_product_link_close - 5
+	 * @hooked woocommerce_template_loop_add_to_cart - 10
+	 */
+	do_action( 'woocommerce_after_shop_loop_item' );
+	?>
+
+</li>

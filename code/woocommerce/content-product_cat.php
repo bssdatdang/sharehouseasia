@@ -33,8 +33,8 @@ if ( empty( $woocommerce_loop['columns'] ) ) {
 
 // Increase loop count.
 $woocommerce_loop['loop']++;
-?>  
-<div class="wrap  item-product">
+?>
+<li <?php wc_product_cat_class( '', $category ); ?>>
 	<?php
 	/**
 	 * woocommerce_before_subcategory hook.
@@ -68,4 +68,4 @@ $woocommerce_loop['loop']++;
 	 * @hooked woocommerce_template_loop_category_link_close - 10
 	 */
 	do_action( 'woocommerce_after_subcategory', $category ); ?>
-</div>
+</li>
