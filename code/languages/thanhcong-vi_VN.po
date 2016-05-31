@@ -1,0 +1,171 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: thanhcong\n"
+"POT-Creation-Date: 2016-04-17 15:21+0700\n"
+"PO-Revision-Date: 2016-04-17 15:31+0700\n"
+"Last-Translator: \n"
+"Language-Team: NFS\n"
+"Language: vi\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.8.6\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_\n"
+"X-Poedit-SearchPath-0: inc\n"
+"X-Poedit-SearchPath-1: 404.php\n"
+"X-Poedit-SearchPath-2: archive.php\n"
+"X-Poedit-SearchPath-3: comments.php\n"
+"X-Poedit-SearchPath-4: footer.php\n"
+"X-Poedit-SearchPath-5: functions.php\n"
+"X-Poedit-SearchPath-6: header.php\n"
+"X-Poedit-SearchPath-7: image.php\n"
+"X-Poedit-SearchPath-8: index.php\n"
+"X-Poedit-SearchPath-9: page.php\n"
+"X-Poedit-SearchPath-10: search.php\n"
+"X-Poedit-SearchPath-11: searchform.php\n"
+"X-Poedit-SearchPath-12: sidebar-left.php\n"
+"X-Poedit-SearchPath-13: sidebar-right.php\n"
+"X-Poedit-SearchPath-14: single.php\n"
+"X-Poedit-SearchPath-15: style.css\n"
+"X-Poedit-SearchPath-16: ReduxCore/redux-config.php\n"
+
+#: ReduxCore/redux-config.php:39 ReduxCore/redux-config.php:40
+msgid "Theme Options"
+msgstr "Tùy chọn giao diện"
+
+#: ReduxCore/redux-config.php:151
+msgid "Theme Information 1"
+msgstr "Thông tin giao diện 1"
+
+#: ReduxCore/redux-config.php:152 ReduxCore/redux-config.php:157
+msgid "<p>This is the tab content, HTML is allowed.</p>"
+msgstr "<p>Đây là nội dung tab. HTML có thể sử dụng</p>"
+
+#: ReduxCore/redux-config.php:156
+msgid "Theme Information 2"
+msgstr "Tùy chọn giao diện 2"
+
+#: ReduxCore/redux-config.php:163
+msgid "<p>This is the sidebar content, HTML is allowed.</p>"
+msgstr "<p>Đây là nội dung sidebar. HTML có thể sử dụng</p>"
+
+#: ReduxCore/redux-config.php:176
+msgid "Footer Fields"
+msgstr "Trường của phần cuối web"
+
+#: ReduxCore/redux-config.php:178
+msgid "Enter your description!"
+msgstr "Nhập mô tả của bạn"
+
+#: ReduxCore/redux-config.php:196
+msgid "Image Uploads"
+msgstr "Tải hình ảnh"
+
+#: ReduxCore/redux-config.php:204
+msgid "Logo w/ URL"
+msgstr "chọn logo hoặc đường dẫn"
+
+#: ReduxCore/redux-config.php:206
+msgid "Basic media uploader with disabled URL input field."
+msgstr "Phương tiện tải lên đã bị khóa kiểu nhập URL"
+
+#: ReduxCore/redux-config.php:207
+msgid "Upload any media using the WordPress native uploader"
+msgstr "Tải bất kì đa Phương sử dung Wordpress uploader"
+
+#: ReduxCore/redux-config.php:213
+msgid "Slides Options"
+msgstr "Tùy chọn Slider"
+
+#: ReduxCore/redux-config.php:214
+msgid "Unlimited slides with drag and drop sortings."
+msgstr "Slide không giới hạn bằng cách kéo và thả phân loại."
+
+#: ReduxCore/redux-config.php:215
+msgid ""
+"This field will store all slides values into a multidimensional array to use "
+"into a foreach loop."
+msgstr ""
+"Trường này sẽ lưu trữ tất cả các slide giá trị vào một mảng đa chiều để sử "
+"dụng vào một vòng lặp foreach."
+
+#: ReduxCore/redux-config.php:217
+msgid "This is a title"
+msgstr "Đây là tiêu đề"
+
+#: ReduxCore/redux-config.php:218
+msgid "Description Here"
+msgstr "Mô tả"
+
+#: ReduxCore/redux-config.php:219
+msgid "Give us a link!"
+msgstr "Hãy cho chúng tôi một liên kết!"
+
+#: ReduxCore/redux-config.php:230
+msgid "Documentation"
+msgstr "Tài liệu"
+
+#: ReduxCore/redux-config.php:316
+msgid "Section via hook"
+msgstr "Section thông qua hook"
+
+#: ReduxCore/redux-config.php:317
+msgid ""
+"<p class=\"description\">This is a section created by adding a filter to the "
+"sections array. Can be used by child themes to add/remove sections from the "
+"options.</p>"
+msgstr ""
+"<p class=\"description\">Đây là một phần tạo ra bằng cách thêm một bộ lọc để "
+"mảng phần. Có thể được sử dụng bởi các chủ đề con để thêm / gỡ bỏ các phần "
+"từ các tùy chọn</p>"
+
+#: archive.php:32 single.php:12
+msgid "Post by:"
+msgstr "Đăng bởi:"
+
+#: functions.php:40
+msgid "Primary Menu"
+msgstr "Menu  chính"
+
+#: functions.php:41
+msgid "Footer Menu"
+msgstr "Menu phụ"
+
+#: functions.php:72
+msgid "Sidebar Left"
+msgstr "Sidebar trái"
+
+#: functions.php:74
+msgid "Add widgets here to appear in your sidebar left."
+msgstr "Thêm widget ở đây để hiển thị ở sidebar trái"
+
+#: functions.php:82
+msgid "Sidebar Right"
+msgstr "Sidebar phải"
+
+#: functions.php:84
+msgid "Add widgets here to appear in your sidebar right"
+msgstr "Thêm widget ở đây để hiển thị ở sidebar phải"
+
+#: inc/shortcodes/product-category.php:5
+msgid "--All--"
+msgstr "--Tất cả--"
+
+#: inc/shortcodes/product-category.php:50
+msgid "Category Product"
+msgstr "Danh mục sản phẩm"
+
+#: inc/shortcodes/product-category.php:52
+msgid "ThanhCong"
+msgstr "ThanhCong"
+
+#: inc/widgets/category-product.php:42 inc/widgets/recent-post.php:43
+msgid " --All--"
+msgstr "--Tất cả--"
+
+#: searchform.php:2
+msgid "Enter your key"
+msgstr "Nhập từ khóa cần tìm"
