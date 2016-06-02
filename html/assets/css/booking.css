@@ -1,0 +1,81 @@
+.booking-page {
+    background: #f5f5f5;
+}
+
+.booking-page .banner {
+    height: 300px;
+    background: url("../images/booking/booking_baner.png");
+}
+
+.text-booking {
+    color: #8c6b4b;
+    padding-top: 86px;
+}
+
+.booking-content {
+    padding-top: 50px;
+}
+
+.booking-page .booking-form {
+
+}
+
+.booking-page .title-process {
+    background: #8c6b4b;
+    height: 50px;
+}
+
+.title-booking-form {
+    background: #8c6b4b;
+    height: 50px;
+    text-align: center;
+}
+
+.text-title-booking-form {
+    padding-top: 17px;
+    font-size: 1.1em;
+    color: #fff;
+}
+
+.content-form-booking {
+    margin-top: 5px;
+    background: #8c6b4b;
+}
+
+.form-booking-select {
+    padding: 15px;
+    color: #fff;
+}
+
+.form-booking-text {
+    padding-left: 20px;
+}
+
+.icon-info-booking {
+    position: absolute;
+    padding-top: 9px;
+    font-size: 1.5em;
+}
+
+.form-booking-rom {
+    font-weight: 700;
+}
+
+.form-booking-adult {
+    font-style: oblique;
+}
+.form-booking-filed{
+    padding-top: 50px;
+}
+.booking-form-date{
+    border-radius: 0px;
+    background: #f5f5f5;
+}
+.booking-select{
+    border-radius: 0px;
+    background: #f5f5f5;
+}
+.form-booking-filed-title{
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
