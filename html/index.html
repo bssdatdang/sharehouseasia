@@ -9,10 +9,10 @@
   <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
   <link rel="stylesheet" href="http://code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
-  <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Montserrat%3Aregular%2C700&#038;subset=latin&#038;ver=4.3.4' type='text/css' media='all' />
   <link rel='stylesheet' href='http://fonts.googleapis.com/css?family=Open+Sans%3A300%2C300italic%2Cregular%2Citalic%2C600%2C600italic%2C700%2C700italic%2C800%2C800italic&#038;subset=greek%2Ccyrillic-ext%2Ccyrillic%2Clatin%2Clatin-ext%2Cvietnamese%2Cgreek-ext&#038;ver=4.3.4' type='text/css' media='all' />
   <link href='https://fonts.googleapis.com/css?family=Nunito:300' rel='stylesheet' type='text/css'>
   <link rel="stylesheet" type="text/css" href="assets/css/animate.min.css">
+  <link rel="stylesheet" type="text/css" href="assets/css/datepicker.css">
   <link rel="stylesheet" type="text/css" href="assets/css/homepage.css">
   <link rel="stylesheet" type="text/css" href="assets/css/responsive.css">
 </head>
@@ -26,8 +26,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="#" class="navbar-brand img-logo">
-          <img src="assets/images/logo.png"></a>
+        <a href="index.html" class="navbar-brand img-logo">
+          <img src="assets/images/logo.png">
+        </a>
       </div>
       <nav id="sh-main-navbar" class="collapse navbar-collapse sh-main-navbar">
         <ul class="sh-menu nav navbar-nav navbar-right ">
@@ -35,9 +36,16 @@
           </li>
           <li class="dropdown"> <a href="#" data-toggle="dropdown">Service    <span class="caret"></span></a>
             <ul class="dropdown-menu">
-              <li><a href="#">LIVE</a> </li>
-              <li><a href="#">PLAY & WORK</a> </li>
-              <li><a href="#">SUPPORT</a> </li>
+              <li><a class="sub-menu-item  right-caret">live  </a>
+                <ul class="dropdown-menu sub-menu">
+                  <li><a href="#" class="sub-menu-item  ">live 1</a>
+                  </li>
+                  <li><a href="#">live 2</a> </li>
+                  <li><a href="#">live 3</a> </li>
+                </ul>
+              </li>
+              <li><a href="#">play & work</a> </li>
+              <li><a href="#">support</a> </li>
             </ul>
           </li>
           <li> <a href="#">Blog</a> </li>
@@ -57,9 +65,10 @@
             <div class="overlay">
             </div>
             <div class="video-caption">
+              <a href="#" class="btn btn-circle  btn-play hide-md" data-video="slider-video-main"><i class="fa fa-play-circle" ></i></a>
               <h2 class="text-branding text-jumbo text-contrast"> Live There </h2>
               <p class="text-contrast"> Book homes from local hosts in 191+ countries and experience a place like you live there. </p>
-              <a href="#" class="btn btn-circle  btn-play" data-video="slider-video-main"><i class="fa fa-play-circle" ></i></a>
+              <a href="#" class="btn btn-circle  btn-play hide-sm" data-video="slider-video-main"><i class="fa fa-play-circle" ></i></a>
             </div>
           </div>
           <div class="slider-player  video-control" aria-hidden="true">
@@ -72,60 +81,59 @@
               <a href="#" class="btn btn-circle  btn-play" data-video="slider-video-player"><i class="fa fa-play-circle" ></i></a>
             </div>
           </div>
-        </div>
-      </div>
-      <!--Start Box Check Availablity-->
-      <div class="checking box even" id="checking">
-        <div class="box-inner panel panel-default">
-          <div class="container">
-           <!--  <div class="panel-heading   wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="500ms">
-              <h3 class="panel-title">FIND A ROOM FOR YOUR ARRIVAL DATE</h3>
-            </div> -->
-            <div class="panel-body">
-              <form class="form-check-available" method="post" action="#">
-                <div class="form-group">
-                  <div class="row">
-                    <div class="col-md-3   wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="500ms">
-                      <label for="date-check-in">Area</label>
-                      <select class="form-control">
-                        <option value="1">North Binh Thanh District</option>
-                        <option value="1">Southern Binh Thanh District</option>
-                        <option value="1">District 2</option>
-                        <option value="1">District 3</option>
-                      </select>
+          <!--Start Box Check Availablity-->
+          <div class="checking" id="checking">
+            <div class="box-inner panel panel-default">
+              <div class="container">
+                <div class="panel-body">
+                  <form class="form-check-available form-inline" method="post" action="#">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <select class="searchform-location searchform-input">
+                          <option value="" disabled selected hidden>Please select your area...</option>
+                          <option value="1">North Binh Thanh District</option>
+                          <option value="1">Southern Binh Thanh District</option>
+                          <option value="1">District 2</option>
+                          <option value="1">District 3</option>
+                        </select>
+                        <input type="text" name="dateStart" data-check="start" class=" searchform-input searchform-date date-check-in" placeholder="Check in" id="date-check-in">
+                        <input type="text" name="dateEnd" data-check="end" class=" searchform-input searchform-date date-check-out" placeholder="Check out" id="date-check-out">
+                        <select class="searchform-guest searchform-input">
+                          <option value="1">1 Guest</option>
+                          <option value="2">2 Guest</option>
+                        </select>
+                        <button class="btn btn-search   ">
+                          Search
+                        </button>
+                      </div>
                     </div>
-                    <div class="col-md-2 col-sm-6  wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="700ms">
-                      <label for="date-check-in">Check In</label>
-                      <input type="text" class="form-control date-check-in" id="date-check-in" name="">
-                    </div>
-                    <div class="col-md-2  col-sm-6   wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="900ms">
-                      <label for="date-check-out">Check In</label>
-                      <input type="text" class="form-control date-check-out" id="date-check-out" name="">
-                    </div>
-                    <div class="col-md-5 wow fadeInUp" data-wow-duration="0.9s" data-wow-delay="1100ms">
-                      <button class="btn btn-success form-control">
-                        Check availablity
-                      </button>
-                    </div>
-                  </div>
+                  </form>
                 </div>
-              </form>
+              </div>
             </div>
           </div>
+          <!--/End Box Check Availablity-->
         </div>
       </div>
-      <!--/End Box Check Availablity-->
       <!--Start Box Service-->
       <div class="service box odd" id="service">
         <div class="box-inner panel panel-default">
           <div class="container">
-            <div class="panel-heading  wow bounce" data-wow-duration="0.9s" data-wow-delay="700ms">
-              <h3 class="panel-title">Service</h3>
+            <div class="panel-heading ">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
+                  <h3 class="panel-title">Service</h3>
+                  <p>Loem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+                </div>
+              </div>
             </div>
             <div class="panel-body">
               <div class="row">
                 <div class="col-lg-4 col-md-4 col-sm-4 ">
                   <div class="service-inner wow fadeIn" data-wow-duration="0.9s" data-wow-delay="700ms">
+                    <div class="service-icon">
+                      <i class="fa fa-empire"></i>
+                    </div>
                     <h4 class="service-title">Live</h4>
                     <ul class="service-list list-unstyled">
                       <li class="service-item">
@@ -205,6 +213,9 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 ">
                   <div class="service-inner wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+                    <div class="service-icon">
+                      <i class="fa fa-file-word-o"></i>
+                    </div>
                     <h4 class="service-title">Play & Work</h4>
                     <ul class="service-list list-unstyled">
                       <li class="service-item">
@@ -236,6 +247,9 @@
                 </div>
                 <div class="col-lg-4 col-md-4 col-sm-4 ">
                   <div class="service-inner wow fadeIn" data-wow-duration="0.9s" data-wow-delay="700ms">
+                    <div class="service-icon">
+                      <i class="fa fa-life-ring"></i>
+                    </div>
                     <h4 class="service-title">Support</h4>
                     <ul class="service-list list-unstyled">
                       <li class="service-item">
@@ -299,60 +313,75 @@
       <div class="location box even" id="checking">
         <div class="box-inner panel panel-default">
           <div class="container">
-            <div class="panel-heading wow bounceIn" data-wow-duration="0.9s" data-wow-delay="700ms">
-              <h3 class="panel-title">Location</h3>
+            <div class="panel-heading ">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
+                  <h3 class="panel-title">Location</h3>
+                  <p>Loem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+                </div>
+              </div>
             </div>
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-8 col-xs-8 location-top location-item ">
-                  <div class="location-inner wow bounceIn" data-wow-duration="2.5s" data-wow-delay="700ms">
-                    <div class="location-thumbnail">
-                      <img src="assets/images/binhthanh.jpg">
+                  <a href="room_detail.html">
+                    <div class="location-inner  ">
+                      <div class="location-thumbnail">
+                        <img src="assets/images/binhthanh.jpg">
+                      </div>
+                      <div class="location-info">
+                        <strong> North Binh Thanh</strong>
+                      </div>
                     </div>
-                    <div class="location-info">
-                      <a href="#">North Binh Thanh</a>
-                    </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="col-md-4 col-xs-4 location-top location-item ">
-                  <div class="location-inner  wow bounceIn" data-wow-duration="2.3s" data-wow-delay="700ms">
-                    <div class="location-thumbnail">
-                      <img src="assets/images/nambinhthanh.jpg">
+                  <a href="room_detail.html">
+                    <div class="location-inner ">
+                      <div class="location-thumbnail">
+                        <img src="assets/images/nambinhthanh.jpg">
+                      </div>
+                      <div class="location-info">
+                        <strong>Southern Binh Thanh</strong>
+                      </div>
                     </div>
-                    <div class="location-info">
-                      <a href="#">Southern Binh Thanh</a>
-                    </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="col-md-4 col-xs-4 location-bottom location-item ">
-                  <div class="location-inner  wow bounceInUp" data-wow-duration="2.3s" data-wow-delay="700ms">
-                    <div class="location-thumbnail">
-                      <img src="assets/images/nambinhthanh.jpg">
+                  <a href="room_detail.html">
+                    <div class="location-inner  ">
+                      <div class="location-thumbnail">
+                        <img src="assets/images/nambinhthanh.jpg">
+                      </div>
+                      <div class="location-info">
+                        <strong>District 3</strong>
+                      </div>
                     </div>
-                    <div class="location-info">
-                      <a href="#">District 3</a>
-                    </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="col-md-4  col-xs-4 location-bottom location-item ">
-                  <div class="location-inner  wow bounceInUp" data-wow-duration="2.6s" data-wow-delay="700ms">
-                    <div class="location-thumbnail">
-                      <img src="assets/images/nambinhthanh.jpg">
+                  <a href="room_detail.html">
+                    <div class="location-inner  ">
+                      <div class="location-thumbnail">
+                        <img src="assets/images/nambinhthanh.jpg">
+                      </div>
+                      <div class="location-info">
+                        <strong>District 5</strong>
+                      </div>
                     </div>
-                    <div class="location-info">
-                      <a href="#">District 5</a>
-                    </div>
-                  </div>
+                  </a>
                 </div>
                 <div class="col-md-4  col-xs-4 location-bottom location-item ">
-                  <div class="location-inner  wow bounceInUp" data-wow-duration="3s" data-wow-delay="700ms">
-                    <div class="location-thumbnail">
-                      <img src="assets/images/nambinhthanh.jpg">
+                  <a href="room_detail.html">
+                    <div class="location-inner  ">
+                      <div class="location-thumbnail">
+                        <img src="assets/images/nambinhthanh.jpg">
+                      </div>
+                      <div class="location-info">
+                        <strong>District 10</strong>
+                      </div>
                     </div>
-                    <div class="location-info">
-                      <a href="#">District 10</a>
-                    </div>
-                  </div>
+                  </a>
                 </div>
               </div>
             </div>
@@ -364,13 +393,18 @@
       <div class="event box odd" id="event">
         <div class="box-inner panel panel-default">
           <div class="container">
-            <div class="panel-heading  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
-              <h3 class="panel-title">Event</h3>
+            <div class="panel-heading  wow fadeIn" data-wow-duration="0.7s" data-wow-delay="500ms">
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
+                  <h3 class="panel-title">Event</h3>
+                  <p>Loem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+                </div>
+              </div>
             </div>
             <div class="panel-body">
               <div class="row">
                 <div class="col-md-8">
-                  <div class="slider-category  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+                  <div class="slider-category  wow fadeIn" data-wow-duration="0.7s" data-wow-delay="600ms">
                     <div class="slider slider-for">
                       <div class="slider-category-item">
                         <div class="event-item">
@@ -641,30 +675,41 @@
       <div class="testimonial box even" id="testimonial">
         <div class="box-inner panel panel-default">
           <div class="container">
-            <div class="panel-heading  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
-              <h3 class="panel-title">What Client Say</h3>
+            <div class="panel-heading  wow fadeIn" data-wow-duration="0.7s" data-wow-delay="700ms">
+              <h3 class="panel-title">What Our Customers Are Saying</h3>
             </div>
             <div class="panel-body">
-              <div class="list-testimonials  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
-                <div class="testimonial-item">
-                  <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
-                  <p class="testimonial-author">Tâm Nguyễn - TP.HCM - <a href="#">www.mobigo.vn</a> </p>
-                </div>
-                <div class="testimonial-item">
-                  <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
-                  <p class="testimonial-author">Tâm Nguyễn - TP.HCM - <a href="#">www.mobigo.vn</a> </p>
-                </div>
-                <div class="testimonial-item">
-                  <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
-                  <p class="testimonial-author">Tâm Nguyễn - TP.HCM - <a href="#">www.mobigo.vn</a> </p>
-                </div>
-                <div class="testimonial-item">
-                  <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
-                  <p class="testimonial-author">Tâm Nguyễn - TP.HCM - <a href="#">www.mobigo.vn</a> </p>
-                </div>
-                <div class="testimonial-item">
-                  <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
-                  <p class="testimonial-author">Tâm Nguyễn - TP.HCM - <a href="#">www.mobigo.vn</a> </p>
+              <div class="row">
+                <div class="col-md-8 col-md-offset-2">
+                  <div class="list-testimonials  wow fadeIn" data-wow-duration="0.7s" data-wow-delay="700ms">
+                    <div class="testimonial-item">
+                      <div class="testimonial-info">
+                        <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+                        <p class="testimonial-author">Tâm Nguyễn - TP.HCM - <a href="#">www.mobigo.vn</a> </p>
+                      </div>
+                      <div class="testimonial-thumbnail">
+                        <img src="assets/images/news.jpg">
+                      </div>
+                    </div>
+                    <div class="testimonial-item">
+                      <div class="testimonial-info">
+                        <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+                        <p class="testimonial-author">Hung Hoang - TP.HCM - <a href="#">www.hunghk.com</a> </p>
+                      </div>
+                      <div class="testimonial-thumbnail">
+                        <img src="assets/images/news.jpg">
+                      </div>
+                    </div>
+                    <div class="testimonial-item">
+                      <div class="testimonial-info">
+                        <p class="testimonial-content">Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie. Lorem ipsum dolor sit amet, consectetur adipiscing elitquisque tempus ac eget diam et laoreet phasellus ut nisi id leo molestie.</p>
+                        <p class="testimonial-author">Dat Quoc - TP.HCM - <a href="#">www.datquoc.com</a> </p>
+                      </div>
+                      <div class="testimonial-thumbnail">
+                        <img src="assets/images/news.jpg">
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -676,11 +721,11 @@
       <div class="client box odd" id="client">
         <div class="box-inner panel panel-default">
           <div class="container">
-            <div class="panel-heading  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+            <div class="panel-heading  wow fadeIn" data-wow-duration="0.7s" data-wow-delay="700ms">
               <h3 class="panel-title">Client</h3>
             </div>
             <div class="panel-body">
-              <div class="brands  wow fadeIn" data-wow-duration="0.9s" data-wow-delay="1000ms">
+              <div class="brands  wow fadeIn" data-wow-duration="0.7s" data-wow-delay="700ms">
                 <div class="brand-item">
                   <a href="#"><img src="assets/images/default.png"></a>
                 </div>
@@ -722,7 +767,7 @@
       <div class="footer-top">
         <div class="container">
           <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 sh-widget">
+            <div class="col-lg-4 col-md-4 col-sm-4 sh-widget">
               <img src="assets/images/ss-logo-footer.png">
               <div class="widget-inner">
                 <p> Phone: +84 938 938 837</p>
@@ -746,7 +791,7 @@
                 </li>
               </ul>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 sh-widget">
+            <div class="col-lg-4 col-md-4 col-sm-4 sh-widget">
               <h3 class="widget-title">
                 LATEST FROM OUR BLOG
               </h3>
@@ -767,7 +812,7 @@
                 </ul>
               </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 sh-widget">
+            <div class="col-lg-4 col-md-4 col-sm-4 sh-widget">
               <h3 class="widget-title">
                 MORE LINK
               </h3>
@@ -780,42 +825,6 @@
                     <a href="#">CONTACT US</a>
                   </li>
                 </ul>
-              </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6  sh-widget">
-              <h3 class="widget-title">
-                PHOTO STREAM
-              </h3>
-              <div class="widget-inner">
-                <div class="album-image">
-                  <a href="#" target="_blank">
-                    <img src="http://farm4.staticflickr.com/3876/15161220656_6258b3df9a_s.jpg" alt="Image in flickr" title="The Beginning of a New Journey #5694" height="75" width="75">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="http://farm4.staticflickr.com/3876/15161220656_6258b3df9a_s.jpg" alt="Image in flickr" title="The Beginning of a New Journey #5694" height="75" width="75">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="http://farm4.staticflickr.com/3876/15161220656_6258b3df9a_s.jpg" alt="Image in flickr" title="The Beginning of a New Journey #5694" height="75" width="75">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="http://farm4.staticflickr.com/3876/15161220656_6258b3df9a_s.jpg" alt="Image in flickr" title="The Beginning of a New Journey #5694" height="75" width="75">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="http://farm4.staticflickr.com/3876/15161220656_6258b3df9a_s.jpg" alt="Image in flickr" title="The Beginning of a New Journey #5694" height="75" width="75">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="http://farm4.staticflickr.com/3876/15161220656_6258b3df9a_s.jpg" alt="Image in flickr" title="The Beginning of a New Journey #5694" height="75" width="75">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="http://farm4.staticflickr.com/3876/15161220656_6258b3df9a_s.jpg" alt="Image in flickr" title="The Beginning of a New Journey #5694" height="75" width="75">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="http://farm4.staticflickr.com/3876/15161220656_6258b3df9a_s.jpg" alt="Image in flickr" title="The Beginning of a New Journey #5694" height="75" width="75">
-                  </a>
-                  <a href="#" target="_blank">
-                    <img src="http://farm4.staticflickr.com/3876/15161220656_6258b3df9a_s.jpg" alt="Image in flickr" title="The Beginning of a New Journey #5694" height="75" width="75">
-                  </a>
-                </div>
               </div>
             </div>
           </div>
@@ -859,6 +868,7 @@
   <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
   <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
   <script src="http://code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+  <script type="text/javascript" src="assets/js/moment.min.js"></script>
   <script type="text/javascript" src="assets/js/datepicker.min.js"></script>
   <script type="text/javascript" src="assets/js/slick.min.js"></script>
   <script type="text/javascript" src="assets/js/wow.js"></script>
