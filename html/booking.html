@@ -66,6 +66,7 @@
                 <div class="row">
                     <div class="booking-content">
                         <div class="col-md-3 col-sm-3 booking-form">
+                            <!--Start form check booking-->
                             <div class="title-booking-form">
                                 <div class="text-title-booking-form">Your Reservation</div>
                             </div>
@@ -91,7 +92,8 @@
                                             <div class="input-group">
                                                 <input type="text" class="form-control booking-form-date date-check-in"
                                                        id="date-check-in" name="">
-                                                <label for="date-check-in" class="booking-form-date input-group-addon btn"><span
+                                                <label for="date-check-in"
+                                                       class="booking-form-date input-group-addon btn"><span
                                                         class="glyphicon glyphicon-calendar"></span>
 
                                                 </label>
@@ -102,20 +104,501 @@
                                             <div class="input-group">
                                                 <input type="text" class="form-control booking-form-date date-check-out"
                                                        id="date-check-out" name="">
-                                                <label for="date-check-out" class="booking-form-date input-group-addon btn"><span
+                                                <label for="date-check-out"
+                                                       class="booking-form-date input-group-addon btn"><span
                                                         class="glyphicon glyphicon-calendar"></span>
 
                                                 </label>
                                             </div>
                                         </div>
+                                        <div class="form-booking-filed-title">Rooms</div>
+                                        <div class="controls">
+                                            <div class="input-group">
+                                                <select class="form-control booking-select">
+                                                    <option>1</option>
+                                                    <option>2</option>
+                                                    <option>3</option>
+                                                    <option>4</option>
+                                                    <option>5</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-booking-filed-title">
+                                            <div class="form-group">
+                                                <button class="btn btn-search">
+                                                    Check Availability
+                                                </button>
+                                            </div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <!--End form check booking-->
                         </div>
                         <div class="col-md-9 col-sm-9 booking-process">
-                            <div class="title-process">
+                            <div class="booking-tabs">
+                                <!-- Nav tabs -->
+                                <ul class="tabs-booking nav nav-tabs" role="tablist">
+                                    <li role="presentation" class="active"><a href="#home" aria-controls="home"
+                                                                              role="tab" data-toggle="tab">1. Search
+                                        Room</a></li>
+                                    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab"
+                                                               data-toggle="tab">2. Choose Room</a></li>
+                                    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab"
+                                                               data-toggle="tab">3. Make a Reservation</a></li>
+                                    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab"
+                                                               data-toggle="tab" class="booking-tab-confirm">4.
+                                        Confirmation</a></li>
+                                </ul>
+
+                                <!-- Tab panes -->
+                                <div class="tab-content">
+                                    <!--Start Search tab -->
+                                    <div role="tabpanel" class="tab-pane active" id="home">
+                                        <div class="input-group booking-search">
+                                            <input type="text" class="form-control" placeholder="Search for...">
+                                      <span class="input-group-btn">
+                                        <button class="btn btn-default" type="button">
+                                            <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+                                        </button>
+                                      </span>
+                                        </div><!-- /input-group -->
+
+                                        <div class="row">
+                                            <div class="col-xs-12 col-sm-6 col-md-4">
+                                                <!-- Single button -->
+                                                <div class="btn-group btn-list-booking">
+                                                    <button type="button" class="btn btn-default dropdown-toggle"
+                                                            data-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                        View <span class="caret"></span>
+                                                    </button>
+                                                    <ul class="dropdown-menu">
+                                                        <li><a href="#"><span class="glyphicon glyphicon-align-justify"
+                                                                              aria-hidden="true"></span>List</a></li>
+                                                        <li><a href="#"><span class="glyphicon glyphicon-list"
+                                                                              aria-hidden="true"></span>Thumb</a></li>
+                                                        <li><a href="#"><span class="glyphicon glyphicon-th-large"
+                                                                              aria-hidden="true"></span>Gallery</a></li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                            <div class="col-xs-12 col-sm-6 col-md-8">
+                                                <nav>
+                                                    <ul class="pagination pull-right">
+                                                        <li>
+                                                            <a href="#" aria-label="Previous">
+                                                                <span aria-hidden="true">&laquo;</span>
+                                                            </a>
+                                                        </li>
+                                                        <li><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                        <li><a href="#">4</a></li>
+                                                        <li><a href="#">5</a></li>
+                                                        <li>
+                                                            <a href="#" aria-label="Next">
+                                                                <span aria-hidden="true">&raquo;</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+                                        <div class="booking-list-room">
+                                            <div class="booking-list-my-room">
+                                                <div id="myListRooms" class="carousel slide">
+                                                    <!-- 10 news booking of my company -->
+                                                    <div class="carousel-inner" role="listbox">
+                                                        <div class="item active">
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Riverview studio on Hoang Sa street,
+                                                                    District 3 â‚«215 / 97m2 </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> $250 Serviced room for rent on St ,District
+                                                                    1 (Nguyen Cu Trinh Ward ,District 1) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Available, Master Room in HAGL, Thao Dien,
+                                                                    D2 â‚«247 / 40m2 - (Thao Dien, D2) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Looking for roomates to share the
+                                                                    beautiful. â‚«8000000 / 30m2 - (01203376175
+                                                                    David) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Motobike for rent, Honda Wave 110cc 900k
+                                                                    per month (Binh Thanh, District 2) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Studio for Nghe Tinh street, $310 per month
+                                                                    â‚«310 / 35m2 - (Binh Thanh District) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Riverview studio on Hoang Sa street,
+                                                                    District 3 â‚«215 / 97m2 </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> 5 Bedroom Space in Beautiful Serviced Villa
+                                                                    â‚«225 / 300m2 - (Thao Dien, HCMC, Vietnam)</a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Riverview studio on Hoang Sa street,
+                                                                    District 3 â‚«215 / 97m2 </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> 5 Bedroom Space in Beautiful Serviced Villa
+                                                                    â‚«225 / 300m2 - (Thao Dien, HCMC, Vietnam) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                        </div>
+
+                                                        <div class="item">
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Riverview studio on Hoang Sa street,
+                                                                    District 3 â‚«215 / 97m2 </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> $250 Serviced room for rent on St ,District
+                                                                    1 (Nguyen Cu Trinh Ward ,District 1) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Available, Master Room in HAGL, Thao Dien,
+                                                                    D2 â‚«247 / 40m2 - (Thao Dien, D2) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Looking for roomates to share the
+                                                                    beautiful. â‚«8000000 / 30m2 - (01203376175
+                                                                    David) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Motobike for rent, Honda Wave 110cc 900k
+                                                                    per month (Binh Thanh, District 2) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Studio for Nghe Tinh street, $310 per month
+                                                                    â‚«310 / 35m2 - (Binh Thanh District) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Riverview studio on Hoang Sa street,
+                                                                    District 3 â‚«215 / 97m2 </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> 5 Bedroom Space in Beautiful Serviced Villa
+                                                                    â‚«225 / 300m2 - (Thao Dien, HCMC, Vietnam)</a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> Riverview studio on Hoang Sa street,
+                                                                    District 3 â‚«215 / 97m2 </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                            <div class="booking-news">
+                                                                <span class="glyphicon glyphicon-star-empty"
+                                                                      aria-hidden="true"></span> Jun 6
+                                                                <a href="#"> 5 Bedroom Space in Beautiful Serviced Villa
+                                                                    â‚«225 / 300m2 - (Thao Dien, HCMC, Vietnam) </a>
+                                                                ==== <span class="glyphicon glyphicon-check"
+                                                                           aria-hidden="true"></span>
+                                                                <a href="#" class="booking-check-availability">check
+                                                                    availability</a>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+
+                                                </div>
+                                                <!--List news booking of customer-->
+                                                <div class="list-booking-customer">
+                                                    <div class="booking-news">
+                                                        <span class="glyphicon glyphicon-star-empty"
+                                                              aria-hidden="true"></span> Jun 6
+                                                        <a href="#"> Riverview studio on Hoang Sa street, District 3
+                                                            â‚«215 / 97m2 </a>
+                                                    </div>
+                                                    <div class="booking-news">
+                                                        <span class="glyphicon glyphicon-star-empty"
+                                                              aria-hidden="true"></span> Jun 6
+                                                        <a href="#"> Serviced room for rent on De Tham St. in District
+                                                            1. â‚«350 / 25m2 - (69/2 De Tham St., District 1, HCMC) </a>
+                                                    </div>
+                                                    <div class="booking-news">
+                                                        <span class="glyphicon glyphicon-star-empty"
+                                                              aria-hidden="true"></span> Jun 6
+                                                        <a href="#">Room in a shared house, D1, Available July, 240$ ALL
+                                                            included â‚«240 (TP Ho Chi Minh) </a>
+                                                    </div>
+                                                    <div class="booking-news">
+                                                        <span class="glyphicon glyphicon-star-empty"
+                                                              aria-hidden="true"></span> Jun 6
+                                                        <a href="#"> Serviced room for rent on De Tham St. in District
+                                                            1. â‚«350 / 25m2 - (69/2 De Tham St., District 1, HCMC) </a>
+                                                    </div>
+                                                    <div class="booking-news">
+                                                        <span class="glyphicon glyphicon-star-empty"
+                                                              aria-hidden="true"></span> Jun 6
+                                                        <a href="#"> $250 Serviced room for rent on Nguyen Canh Chan St
+                                                            , Nguyen Cu Trinh W (Central District 1 - HCMC.) </a>
+                                                    </div>
+                                                    <div class="booking-news">
+                                                        <span class="glyphicon glyphicon-star-empty"
+                                                              aria-hidden="true"></span> Jun 6
+                                                        <a href="#"> $380 Beautiful Room at District 5 â‚«380 / 35m2 -
+                                                            (District 5) </a>
+                                                    </div>
+                                                    <div class="booking-news">
+                                                        <span class="glyphicon glyphicon-star-empty"
+                                                              aria-hidden="true"></span> Jun 6
+                                                        <a href="#"> Riverview studio on Hoang Sa street, District 3
+                                                            â‚«215 / 97m2 </a>
+                                                    </div>
+                                                    <div class="booking-news">
+                                                        <span class="glyphicon glyphicon-star-empty"
+                                                              aria-hidden="true"></span> Jun 6
+                                                        <a href="#"> Available, Gorgeous River view Master Room in HAGL,
+                                                            Thao Dien, D2 â‚«247 / 40m2 - (Thao Dien, D2) </a>
+                                                    </div>
+                                                    <div class="booking-news">
+                                                        <span class="glyphicon glyphicon-star-empty"
+                                                              aria-hidden="true"></span> Jun 6
+                                                        <a href="#"> Huge Master-bedroom with balcony in quiet
+                                                            neighbourhood D2- 218 Dollar (Binh Khanh) </a>
+                                                    </div>
+                                                    <div class="booking-news">
+                                                        <span class="glyphicon glyphicon-star-empty"
+                                                              aria-hidden="true"></span> Jun 6
+                                                        <a href="#"> Riverview studio on Hoang Sa street, District 3
+                                                            â‚«215 / 97m2 </a>
+                                                    </div>
+                                                </div>
+                                                <nav>
+                                                    <ul class="pagination">
+                                                        <li>
+                                                            <a href="#" aria-label="Previous">
+                                                                <span aria-hidden="true">&laquo;</span>
+                                                            </a>
+                                                        </li>
+                                                        <li><a href="#">1</a></li>
+                                                        <li><a href="#">2</a></li>
+                                                        <li><a href="#">3</a></li>
+                                                        <li><a href="#">4</a></li>
+                                                        <li><a href="#">5</a></li>
+                                                        <li>
+                                                            <a href="#" aria-label="Next">
+                                                                <span aria-hidden="true">&raquo;</span>
+                                                            </a>
+                                                        </li>
+                                                    </ul>
+                                                </nav>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!-- End search tab-->
+                                    <!--Start choose room tab -->
+                                    <div role="tabpanel" class="tab-pane" id="profile">
+                                        <div class="booking-choose-room">
+                                            <div class="choose-title">
+                                                Room Selection is Complete
+                                            </div>
+                                            <div class="choose-infomation">
+                                                You can edit your booking by using the panel on the left
+                                            </div>
+                                            <div class="form-group choose-button">
+                                                <button class="btn btn-search">
+                                                    Go to next step
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--End choose room tab -->
+                                    <!--Start make tab -->
+                                    <div role="tabpanel" class="tab-pane" id="messages">
+                                        <div class="booking-make-room">
+                                            <div class="row">
+                                                <div class="col-lg-6 col-sm-6">
+                                                    <div class="form-group booking-make-filed">
+                                                        <label for="name" class="booking-make-label">Name *</label>
+                                                        <input type="text" class="form-control booking-make-input" id="name">
+                                                    </div>
+
+                                                    <div class="form-group booking-make-filed">
+                                                        <label for="email" class="booking-make-label">Email *</label>
+                                                        <input type="email" class="form-control booking-make-input" id="email">
+                                                    </div>
+
+                                                    <div class="form-group booking-make-filed">
+                                                        <label for="address" class="booking-make-label">Address *</label>
+                                                        <textarea class="form-control booking-make-input" id="address"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="col-lg-6 col-sm-6">
+                                                    <div class="form-group booking-make-filed">
+                                                        <label for="last_name" class="booking-make-label">Last Name *</label>
+                                                        <input type="text" class="form-control booking-make-input" id="last_name">
+                                                    </div>
+
+                                                    <div class="form-group booking-make-filed">
+                                                        <label for="phone" class="booking-make-label">Phone *</label>
+                                                        <input type="text" class="form-control booking-make-input" id="phone">
+                                                    </div>
+                                                    <div class="form-group booking-make-filed">
+                                                        <label for="additionalNote" class="booking-make-label">Additional Note </label>
+                                                        <textarea class="form-control booking-make-input" id="additionalNote"></textarea>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="booking-make-btn">
+                                                <button class="btn btn-search btn-book-email">
+                                                    Book now by email and we will contact you back.
+                                                </button>
+                                            </div>
+                                            <div class="booking-make-or">
+                                                <div class="booking-make-or-title">Or</div>
+                                            </div>
+                                            <div class="booking-make-btn">
+                                                <button class="btn btn-search btn-book-paypal">
+                                                    Paypal
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--End make tab -->
+                                    <!--Start confirm tab -->
+                                    <div role="tabpanel" class="tab-pane" id="settings">
+                                        <div class="booking-confirm">
+                                            <div class="booking-confirm-content">
+                                                <div class="confirm-title">
+                                                    Reservation Completed!
+                                                </div>
+                                                <div class="confirm-infomation">
+                                                    Your reservation details have just been sent to your email. If you have any question, please don't hesitate to contact us. Thank you!
+                                                    <br><br>
+                                                    <span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>info@sharehouseasia.com
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <!--End confirm tab -->
+                                </div>
 
                             </div>
+                            <!--  <div class="title-process">
+
+                             </div> -->
                         </div>
                     </div>
                 </div>
@@ -280,6 +763,7 @@
     </footer>
 </div>
 <a href="#" class="backtop"><i class="fa fa-arrow-up"></i></a>
+
 <!--Import lib javascript-->
 <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
 <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
@@ -289,6 +773,15 @@
 <script type="text/javascript" src="assets/js/wow.js"></script>
 <script type="text/javascript" src="assets/js/homepage.js"></script>
 <script type="text/javascript" src="assets/js/booking.js"></script>
+
+
+<script>
+    $(document).ready(function () {
+        // Activate Carousel
+        $('#myListRooms').carousel();
+
+    });
+</script>
 </body>
 
 </html>

@@ -64,18 +64,153 @@
 .form-booking-adult {
     font-style: oblique;
 }
-.form-booking-filed{
-    padding-top: 50px;
+
+.form-booking-filed {
+    padding-top: 10px;
 }
-.booking-form-date{
+
+.booking-form-date {
     border-radius: 0px;
     background: #f5f5f5;
 }
-.booking-select{
+
+.booking-select {
     border-radius: 0px;
     background: #f5f5f5;
 }
-.form-booking-filed-title{
+
+.form-booking-filed-title {
     margin-top: 20px;
     margin-bottom: 10px;
+}
+
+/*-----------------booking tabs--------------------*/
+ul.tabs-booking.nav.nav-tabs {
+    height: 51px;
+    background: #8c6b4b;
+}
+
+ul.tabs-booking.nav.nav-tabs > li {
+    height: 50px;
+    background: #8c6b4b;
+    border: 0px;
+    width: 25%;
+}
+
+ul.tabs-booking.nav.nav-tabs > li > a {
+    height: 50px;
+    border: 0px;
+    color: #fff;
+    padding-top: 15px;
+    background: url("../images/booking/menu_booking.png");
+    background-size: 100% 100%;
+    padding-left: 25px;
+}
+
+ul.tabs-booking.nav.nav-tabs > li > a.booking-tab-confirm {
+    background: #8c6b4b !important;
+}
+
+.btn-list-booking {
+    padding-top: 10px;
+}
+
+.booking-search {
+    padding-top: 10px;
+}
+
+.booking-list-room {
+    padding-top: 10px;
+}
+
+#myListRooms {
+    padding-bottom: 30px;
+}
+
+.booking-news {
+    padding-top: 10px;
+}
+
+.booking-check-availability {
+    font-size: 12px;
+    color: #8c6b4b;
+}
+
+.list-booking-customer {
+    padding-bottom: 50px;
+}
+.booking-choose-room{
+    text-align: center;
+    padding: 50px;
+    background: #fff;
+    margin-top: 5px;
+}
+.choose-title{
+    font-size: 20px;
+    font-style: oblique;
+}
+.choose-infomation{
+    padding: 20px;
+    border-bottom: 2px solid #e6e6e6;
+}
+.choose-button{
+    padding-top: 20px;
+}
+.choose-button button{
+    color: #fff;
+}
+.booking-make-room{
+    margin-top: 20px;
+}
+.booking-make-filed{
+    padding-top: 10px;
+}
+.booking-make-label{
+    font-style: oblique;
+    font-weight: 100;
+}
+input.booking-make-input{
+    border: 0px;
+    border-radius: 0px;
+}
+textarea.booking-make-input{
+    border: 0px;
+    border-radius: 0px;
+    height: 100px;
+}
+.booking-make-btn{
+    margin-top: 20px;
+}
+button.btn-book-email{
+    width: 100%;
+    color: #fff;
+    height: 70px;
+}
+.booking-make-or{
+    margin-top: 20px;
+    text-align: center;
+    font-size: 25px;
+    font-style: oblique;
+}
+button.btn-book-paypal{
+    margin-bottom: 50px;
+    width: 100%;
+    background: #4a87a2;
+    border: 1px solid #4a87a2;
+    color: #fff;
+    height: 70px;
+}
+.booking-confirm{
+    background: #fff;
+    margin-top: 5px;
+}
+.booking-confirm-content{
+    padding: 50px;
+}
+.confirm-title{
+    font-size: 20px;
+    font-style: oblique;
+}
+.confirm-infomation{
+    padding-top: 20px;
 }
