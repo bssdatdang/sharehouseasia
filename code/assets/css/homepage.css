@@ -619,6 +619,11 @@
    float: left;
    width: 100%;
  }
+
+ .slider-nav .event-inner {
+   height: 116px;
+ }
+
  
  .event-thumbnail {
    width: 100%;

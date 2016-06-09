@@ -174,6 +174,10 @@ function sharehouse_custom_css($css){
 }
 add_action('sharehouse_add_custom_css','sharehouse_custom_css');
 
+function get_url_posttype($id){
+	return get_post_meta( $id, '_link_download', true );
+}
+
 function get_main_menu(){ 
 	wp_nav_menu( array(
     'menu' 						=> 'primary',
@@ -208,3 +212,7 @@ function get_header_logo(){
 } 
 
 //add_filter( 'loop_shop_per_page', create_function( '$cols', 'return 16;' ), 20 );
+function wptp_add_categories_to_attachments() {
+    register_taxonomy_for_object_type( 'category', 'attachment' );
+}
+add_action( 'init' , 'wptp_add_categories_to_attachments' );

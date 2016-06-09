@@ -33,34 +33,34 @@
 <!--Start Box Client-->
 <div class="<?php echo esc_attr($extra_class) ?> box" >
 	<div class="box-inner panel panel-default"> 
-			<?php if (!empty($block_title)):?> 
-				<div class="panel-heading  wow fadeIn <?php if($block_full) echo 'container' ?>" data-wow-duration="0.7s" data-wow-delay="700ms">
-					<h3 class="panel-title"><?php echo esc_html($atts['block_title']) ?></h3>
-				</div>
-			<?php endif; ?>
-			<div class="panel-body <?php if($block_full) echo 'container' ?>">
-				<div class="brands  wow fadeIn" data-wow-duration="0.7s" data-wow-delay="700ms">
-					<?php   
-						if ($clients->have_posts()) {
-							while ($clients->have_posts()) : $clients->the_post(); ?>
-								<div class="brand-item"> 
-									<a href="<?php the_permalink(); ?>">
-									<?php 
-										if ( has_post_thumbnail() ) {
-									    echo get_the_post_thumbnail ();
-										}else{ ?>
-												<img src="<?php echo SHAREHOUSE_THEME_ASSETS_URI?>/images/default.png">
-									<?php	}?>
-									</a>
-								</div> 	
-							<?php
-							endwhile;
-							wp_reset_postdata();
-						}
-					?>
-					 
-					 
-				</div> 
+		<?php if (!empty($block_title)):?> 
+			<div class="panel-heading  wow fadeIn <?php if($block_full) echo 'container' ?>" data-wow-duration="0.7s" data-wow-delay="700ms">
+				<h3 class="panel-title"><?php echo esc_html($atts['block_title']) ?></h3>
+			</div>
+		<?php endif; ?>
+		<div class="panel-body <?php if($block_full) echo 'container' ?>">
+			<div class="brands  wow fadeIn" data-wow-duration="0.7s" data-wow-delay="700ms">
+				<?php   
+					if ($clients->have_posts()) {
+						while ($clients->have_posts()) : $clients->the_post(); ?>
+							<div class="brand-item"> 
+								<a href="<?php the_permalink(); ?>">
+								<?php 
+									if ( has_post_thumbnail() ) {
+								    echo get_the_post_thumbnail ();
+									}else{ ?>
+											<img src="<?php echo SHAREHOUSE_THEME_ASSETS_URI?>/images/default.png">
+								<?php	}?>
+								</a>
+							</div> 	
+						<?php
+						endwhile;
+						wp_reset_postdata();
+					}
+				?>
+				 
+				 
+			</div> 
 		</div>
 	</div>
 </div>

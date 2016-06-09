@@ -12,9 +12,9 @@ class Posttype_Controller extends Helper_Controller
 				'rewrite'								=> array(
 					'slug'									=>'testimonial',
 					),
-				'menu_position'					=> 30,   
-				'show_in_nav_menus'			=> true,
+				'menu_position'					=> 30,    
 				'exclude_from_search'		=> true, 
+				'show_in_nav_menus'			=> false,
 				'menu_icon'							=> 'dashicons-businessman',
 				'supports'							=> array( 'title', 'page-attributes', 'thumbnail', 'editor' ),
 				'labels'								=> array(
@@ -41,8 +41,8 @@ class Posttype_Controller extends Helper_Controller
 				'show_ui'								=> true,
 				'rewrite'								=> array( 'slug'	=>'service', ),
 				'menu_position'					=> 30,   
-				'show_in_nav_menus'			=> true,
 				'exclude_from_search'		=> true, 
+				'show_in_nav_menus'			=> false,
 				'menu_icon'							=> 'dashicons-clipboard',
 				'supports'							=> array( 'title', 'thumbnail', 'editor' ),
 				'labels'								=> array(
@@ -67,8 +67,9 @@ class Posttype_Controller extends Helper_Controller
 			'rewrite'            => true,
 			'query_var'          => true,
 			'show_ui'						 => true,
-			'label'          => __( 'Categories', 'sharehouse' ),
-			'singular_label' => __( 'Category',   'sharehouse' ),
+			'label'          		 => __( 'Service Categories', 'sharehouse' ),
+			'singular_label' 		 => __( 'Service Category',   'sharehouse' ),
+			'menu_name'          => __( 'Service Categories', 'sharehouse' ),
 			)
 		); 
 	}
@@ -77,10 +78,10 @@ class Posttype_Controller extends Helper_Controller
 		$params = array(
 				'public'								=> true, 
 				'rewrite'								=> array( 'slug'=>'client', ),
-				'menu_position'					=> 30,   
-				'show_in_nav_menus'			=> true,
+				'menu_position'					=> 30,    
 				'exclude_from_search'		=> true, 
 				'hierarchical'					=> true, 
+				'show_in_nav_menus'			=> false,
 				'menu_icon'							=> 'dashicons-groups',
 				'supports'							=> array( 'title', 'page-attributes', 'thumbnail', 'editor'),
 				'labels'								=> array(
@@ -106,8 +107,9 @@ class Posttype_Controller extends Helper_Controller
 			'rewrite'            => true,
 			'query_var'          => true,
 			'show_ui'						 => true,
-			'label'          => __( 'Categories', 'sharehouse' ),
-			'singular_label' => __( 'Category',   'sharehouse' ),
+			'label'          		 => __( 'Client Categories ', 'sharehouse' ),
+			'singular_label' 		 => __( 'Client Category',   'sharehouse' ),
+			'menu_name'          => __( 'Client Categories', 'sharehouse' ),
 			)
 		); 
 	}
@@ -123,7 +125,7 @@ class Posttype_Controller extends Helper_Controller
         'hierarchical' => false,
 				'taxonomies'						=> array( 'post_tag','themes_categories'),
 				'query_var'							=> true,
-				'show_in_nav_menus'			=> true,
+				'show_in_nav_menus'			=> false,
 				'exclude_from_search'		=> true, 
 				'menu_icon'							=> 'dashicons-list-view',
 				'supports'							=> array( 'title', 'page-attributes', 'thumbnail','excerpt','comments','editor' ),
@@ -152,8 +154,9 @@ class Posttype_Controller extends Helper_Controller
 			'rewrite'            => true,
 			'query_var'          => true,
 			'show_ui'						 => true,
-			'label'          => __( 'Categories', 'sharehouse' ),
-			'singular_label' => __( 'Category',   'sharehouse' ),
+			'label'          		 => __( 'Event Categories', 'sharehouse' ),
+			'menu_name'          => __( 'Event Categories', 'sharehouse' ),
+			'singular_label' 		 => __( 'Event Category',   'sharehouse' ),
 			)
 		); 
 	} 
@@ -165,7 +168,7 @@ class Posttype_Controller extends Helper_Controller
 			'query_var'					=> true,
 			'rewrite'						=> array( 'slug' => 'location' ), 
 			'label'							=> __( 'Locations', 'sharehouse' ),
-			'singular_name'			=> __( 'Location', 'sharehouse' ),
+			'singular_name'			=> __( 'Location ', 'sharehouse' ),
 			'menu_name'					=> __( 'Locations', 'sharehouse' ),  
 		)); 
 	}
