@@ -58,7 +58,8 @@ class Shortcode_Controller extends Helper_Controller
 	public function service( $atts, $content = null ) 
 	{  
 		$default = array( 
-			'block_title'			=> __( 'Events', 'sharehouse' ), 
+			'block_title'			=> __( 'Services', 'sharehouse' ), 
+			'block_description'			=> '',  
 			'color_title'			=> '',  
 			'block_number' 		=> '10',  
 			'block_full'			=> '',   
@@ -69,6 +70,23 @@ class Shortcode_Controller extends Helper_Controller
 		$atts['id'] = $this->make_id();
 		$atts['extra_class'] .= ' service_'.$this->make_id();
 		return $this->render('service',array('atts'=>$atts, 'content' => $content), true);
+	} 
+
+	public function slider_video( $atts, $content = null ) 
+	{  
+		$default = array( 
+			'block_title'			=> __( 'Slider Video', 'sharehouse' ), 
+			'block_description'			=> '',  
+			'color_title'			=> '',     
+			'block_link1'			=> '', 
+			'block_link2'			=> '', 
+			'extra_class'			=> '',  
+		); 
+
+		$atts = wp_parse_args( $atts, $default );  
+		$atts['id'] = $this->make_id();
+		$atts['extra_class'] .= 'slider-video_'.$this->make_id();
+		return $this->render('slider-video',array('atts'=>$atts, 'content' => $content), true);
 	} 
 	
 	public function location( $atts, $content = null ) 

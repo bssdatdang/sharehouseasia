@@ -76,6 +76,14 @@
 			),
 			'description' => __( 'Default no filter by category.', 'sharehouse' ),
 			'group' => 'Filter'
+		), 
+		array( 
+			'type'            => 'textarea_html',
+			'heading'         => __( 'What is the description to display in block?', 'sharehouse' ),
+			'param_name'      => 'block_description',
+			'value'           => '10',
+			'description'     => __( 'This is the description to display in block', 'sharehouse' ),
+			'default'					=> '10'
 		),
 	); 
 	vc_map(array( 

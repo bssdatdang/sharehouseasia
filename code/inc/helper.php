@@ -171,6 +171,7 @@ class Helper_Controller
 
 	public static function get_shortcodes(){
 		return array(
+			'bs_sharehouse_slider_video' 	=> 'slider_video',
 			'bs_sharehouse_client_brand' 	=> 'client_brand',
 			'bs_sharehouse_testimonials' 	=> 'testimonials',
 			'bs_sharehouse_location'			=> 'location',
