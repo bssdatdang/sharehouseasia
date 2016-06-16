@@ -78,7 +78,7 @@
 			'group' => 'Filter'
 		), 
 		array( 
-			'type'            => 'textarea_html',
+			'type'            => 'textarea_raw_html',
 			'heading'         => __( 'What is the description to display in block?', 'sharehouse' ),
 			'param_name'      => 'block_description',
 			'value'           => '10',
