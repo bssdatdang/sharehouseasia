@@ -1,16 +1,14 @@
 <?php 
-	$block_title = empty($atts['block_title']) ? '' : $atts['block_title'];
-	$block_description = empty($atts['block_description']) ? '' : $atts['block_description'];
-
+	$block_title = empty($atts['block_title']) ? '' : $atts['block_title']; 
 	$extra_class = empty($atts['extra_class']) ? 'service' : 'service '.$atts['extra_class'];
 	$block_number = (empty($atts['block_number']) && !is_numeric($atts['block_number'])) ? '10': $atts['block_number'];
 	$block_offset = (empty($atts['block_offset']) && !is_numeric($atts['block_offset'])) ? '0': $atts['block_offset'];
 	$block_full = empty($atts['block_full']) ? false : true;
-	$sort_by = empty($atts['sort_by']) ? '0s' : $atts['sort_by'];
+	$sort_by = empty($atts['sort_by']) ? '0' : $atts['sort_by'];
 	$categories = empty($atts['category_list']) ? '0' : json_decode(urldecode($atts['category_list']));
 	$categories = Helper_Controller::get_category_s($categories,true);  
-	
 	$orderby = Helper_Controller::get_sort_by($sort_by);
+
 	$args = array(
 		'post_type'				=> 'house_service',
 		'posts_per_page'	=> $block_number,
@@ -35,11 +33,15 @@
 <!--Start Box Service-->
 <div class="<?php echo esc_attr($extra_class) ?> box" >
 	<div class="box-inner panel panel-default"> 
-		<?php if (!empty($block_title)):?> 
+		<?php if (!empty($block_title)):?>  
 			<div class="panel-heading  text-center wow fadeIn <?php if($block_full) echo 'container' ?>" data-wow-duration="0.7s" data-wow-delay="700ms">
-				<h3 class="panel-title"><?php echo esc_html($block_title) ?></h3>
-				<p> <?php echo $block_description ?></p>
-			</div>
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
+						<h3 class="panel-title"><?php echo esc_html($block_title) ?></h3>
+						<p> <?php echo $content; ?></p>
+					</div>
+				</div>
+			</div> 
 		<?php endif; ?>
 		<div class="panel-body <?php if($block_full) echo 'container' ?>">
 			<div class="row">
@@ -64,7 +66,7 @@
 						<h4 class="service-title"><?php the_title()?></h4>
 						<ul class="service-list list-unstyled">
 							<?php   
-								
+								if (!empty($names) && count($names) > 0): 
 									foreach ($names as $k=>$item): 
 							?>
 								<li class="service-item">
@@ -85,7 +87,7 @@
 										 ?>
 									</div>
 								</li> 
-								<?php endforeach; ?>
+								<?php endforeach; endif;?>
 						</ul>
 					</div>
 				</div>

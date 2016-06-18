@@ -17,8 +17,9 @@ require_once('wp_bootstrap_navwalker.php');
 load_theme_textdomain( 'sharehouse', SHAREHOUSE_THEME_DIR . '/languages' );
 
 // Load redux framework
-require_once (SHAREHOUSE_THEME_DIR.'/ReduxCore/framework.php');
-require_once (SHAREHOUSE_THEME_DIR.'/ReduxCore/redux-config.php'); 
+require_once (SHAREHOUSE_THEME_DIR.'/options/redux-framework/framework.php');
+require_once (SHAREHOUSE_THEME_DIR.'/options/redux-extensions/extensions-init.php'); 
+require_once (SHAREHOUSE_THEME_DIR.'/options/redux-config.php'); 
 require_once (SHAREHOUSE_THEME_DIR.'/inc/init.php');
 //add_action('init', 'setup_framework_init');
 if ( ! function_exists( 'SHAREHOUSE_setup' ) ) :
@@ -142,14 +143,15 @@ function sharehouse_scripts() {
 	wp_enqueue_style( 'sharehouse-bootstrap', SHAREHOUSE_THEME_ASSETS_URI.'/css/bootstrap.min.css' );
 	wp_enqueue_style( 'sharehouse-font-awesome', SHAREHOUSE_THEME_ASSETS_URI.'/css/font-awesome.min.css' );
 	wp_enqueue_style( 'sharehouse-animate', SHAREHOUSE_THEME_ASSETS_URI.'/css/animate.min.css' );
-	wp_enqueue_style( 'sharehouse-datepicker', SHAREHOUSE_THEME_ASSETS_URI.'/css/datepicker.css' ); 
+	wp_enqueue_style( 'sharehouse-datepicker', SHAREHOUSE_THEME_ASSETS_URI.'/css/daterangepicker.css' ); 
 	wp_enqueue_style( 'sharehouse-homepage', SHAREHOUSE_THEME_ASSETS_URI.'/css/homepage.css' ); 
 	wp_enqueue_style( 'sharehouse-responsive', SHAREHOUSE_THEME_ASSETS_URI.'/css/responsive.css' );
 
 	// Theme javascript. 
 	wp_enqueue_script( 'jquery' );
-	wp_enqueue_script( 'jquery-ui-datepicker' );
 	wp_enqueue_script( 'jquery-ui-core' );
+	wp_enqueue_script( 'jquery-ui-moment-js',SHAREHOUSE_THEME_ASSETS_URI.'/js/moment.min.js' ,array('jquery') ,'', true );
+	wp_enqueue_script( 'jquery-ui-dateprangeicker',SHAREHOUSE_THEME_ASSETS_URI.'/js/daterangepicker.js' ,array('jquery') ,'', true );
 	wp_enqueue_script( 'sharehouse-bootstrap-min-js', SHAREHOUSE_THEME_ASSETS_URI . '/js/bootstrap.min.js',array('jquery') ,'', true );
  	wp_enqueue_script( 'sharehouse-moment-min', SHAREHOUSE_THEME_ASSETS_URI . '/js/moment.min.js', array('jquery'), '', true );
  	wp_enqueue_script( 'sharehouse-slick-min', SHAREHOUSE_THEME_ASSETS_URI . '/js/slick.min.js', array('jquery'), '', true ); 

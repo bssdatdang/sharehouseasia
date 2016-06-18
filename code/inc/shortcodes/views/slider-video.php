@@ -1,6 +1,5 @@
 <?php 
-	$block_title = empty($atts['block_title']) ? '' : $atts['block_title'];
-	$block_description = empty($atts['block_description']) ? '' : $atts['block_description'];
+	$block_title = empty($atts['block_title']) ? '' : $atts['block_title']; 
 	$extra_class = empty($atts['extra_class']) ? 'slider-video' : 'slider-video '.$atts['extra_class'];
 	$block_link1 = empty($atts['block_link1']) ? 'https://a0.muscache.com/airbnb/static/P1-background-vid-compressed-2.mp4': $atts['block_link1'];
 	$block_link2 = empty($atts['block_link2']) ? 'https://a0.muscache.com/airbnb/static/US_60_ANTHEM.mp4': $atts['block_link2'];
@@ -27,8 +26,8 @@
 				<h2 class="text-branding panel-title text-jumbo text-contrast"> <?php echo esc_html($block_title) ?> </h2>
 				<?php endif; ?>
 
-				<?php if (!empty($block_description)):?>
-				<p class="text-contrast"> <?php echo esc_html($block_description) ?> </p>
+				<?php if (!empty($content)):?>
+				<p class="text-contrast"> <?php echo esc_html($content) ?> </p>
 				<?php endif; ?> 
 				<a href="#" class="btn btn-circle  btn-play hide-sm" data-video="slider-video-main"><i class="fa fa-play-circle" ></i></a>
 			</div>

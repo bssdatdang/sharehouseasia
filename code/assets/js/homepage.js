@@ -9,7 +9,7 @@
   var currentMonth1 = dateout.getMonth();
   var currentDate1 = dateout.getDate();
   var currentYear1 = dateout.getFullYear();
-
+/*
   $('.date-check-in').datepicker({
     dateFormat: 'dd/mm/yy',
     minDate: new Date(currentYear, currentMonth, currentDate)
@@ -17,18 +17,16 @@
   $('.date-check-out').datepicker({
     dateFormat: 'dd/mm/yy',
     minDate: new Date(currentYear1, currentMonth1, currentDate1)
-  });
-  /*
+  });*/
   $('.date-check-in').daterangepicker();
-
   $('.date-check-out').on('focus', function() {
     $('.date-check-in').trigger('click');
-  })
+  }),
 
   $('.date-check-out').on('click', function() {
     $('.date-check-in').trigger('click');
-  })*/
-
+  }),
+  
   $('.slider-background  .btn-play').on('click', function() {
     var v = $(this).data('video'),
       src = document.getElementById(v);

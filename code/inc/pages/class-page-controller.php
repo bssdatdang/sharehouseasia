@@ -19,7 +19,7 @@ class Page_Controller   extends Helper_Controller
 		add_meta_box( 'sharehouse_client', __('Client Settings','sharehouse'), array( $this, 'sharehouse_client_field'),'house_client');
 		add_meta_box( 'sharehouse_testimonial', __('Testimonial Settings','sharehouse'), array( $this, 'sharehouse_testimonial_field'),'house_testimonial');
 		add_meta_box( 'sharehouse_service', __('Service Settings','sharehouse'), array( $this, 'sharehouse_service_field'),'house_service');
-		add_meta_box( 'sharehouse_service', __('House Conditions','sharehouse'), array( $this, 'sharehouse_condition_field'),'product');
+		add_meta_box( 'sharehouse_condition', __('House Conditions','sharehouse'), array( $this, 'sharehouse_condition_field'),'product');
 	}
 
 	public function sharehouse_page_setting_field($post){

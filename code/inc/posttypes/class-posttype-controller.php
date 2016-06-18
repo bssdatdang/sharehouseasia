@@ -61,17 +61,7 @@ class Posttype_Controller extends Helper_Controller
 					'parent_item_colon'     => '',
 				), 
 			); 
-		register_post_type( 'house_service',$params );
-		register_taxonomy('service_cat', 'house_service' , array(
-			'hierarchical'       => true,
-			'rewrite'            => true,
-			'query_var'          => true,
-			'show_ui'						 => true,
-			'label'          		 => __( 'Service Categories', 'sharehouse' ),
-			'singular_label' 		 => __( 'Service Category',   'sharehouse' ),
-			'menu_name'          => __( 'Service Categories', 'sharehouse' ),
-			)
-		); 
+		register_post_type( 'house_service',$params ); 
 	}
 
 	public function Register_Client(){ 

@@ -6,29 +6,56 @@
 			'type'            => 'textfield',
 			'heading'         => __( 'What is the title?', 'sharehouse' ),
 			'param_name'      => 'block_title',
-			'value'           => 'Services',
+			'value'           => __( 'Live there', 'sharehouse' ),
 			'description'     => __( 'Title show in box heading.', 'sharehouse' ),
-			'default'					=> 'Services'
+			'default'					=> __( 'Live there', 'sharehouse' )
 		),
 		array(
 			'type'        => 'colorpicker',
 			'heading'     => __( 'What is the title color?', 'sharehouse' ),
 			'param_name'  => 'color_title',
 			'value'       => '',
-			'description' => __( 'Choose block title color.', 'sharehouse' )
+			'description' => __( 'Choose block title color.', 'sharehouse' ),
+			'default'			=> '#000000'
 		),  
+		array(
+			'type'        => 'colorpicker',
+			'heading'     => __( 'What is the background color?', 'sharehouse' ),
+			'param_name'  => 'color_bg',
+			'value'       => '',
+			'description' => __( 'Choose block background color.', 'sharehouse' ),
+			'default'			=> '#000000'
+		),  
+		array(
+			'type'        => 'colorpicker',
+			'heading'     => __( 'What is the text color?', 'sharehouse' ),
+			'param_name'  => 'color_text',
+			'value'       => '',
+			'description' => __( 'Choose block text color.', 'sharehouse' ),
+			'default'			=> '#000000'
+		),     
+		array( 
+			'type'            => 'attach_image',
+			'heading'         => __( 'What is the image for block background?', 'sharehouse' ),
+			'param_name'      => 'bg_image',
+			'value'           => '',
+			'description'     => __( 'This is the image for block background.', 'sharehouse' ),
+			'default'					=> ''
+		),
 		array( 
 			'type'            => 'textfield',
 			'heading'         => __( 'What kind of link do you want to show video on page?', 'sharehouse' ),
 			'param_name'      => 'block_link1',
-			'description'     => __( 'This is link video display in block.', 'sharehouse' ) 
+			'description'     => __( 'This is link video display in block.', 'sharehouse' ),
+			'default'					=> 'https://a0.muscache.com/airbnb/static/P1-background-vid-compressed-2.mp4'
 		),  
 
 		array( 
 			'type'            => 'textfield',
 			'heading'         => __( 'What kind of link do you want to show video after click?', 'sharehouse' ),
 			'param_name'      => 'block_link2', 
-			'description'     => __( 'This is link video display in block  after click.', 'sharehouse' ) 
+			'description'     => __( 'This is link video display in block  after click.', 'sharehouse' ) ,
+			'default'					=> 'https://a0.muscache.com/airbnb/static/US_60_ANTHEM.mp4'
 		),    
 		  
 		array( 
@@ -38,14 +65,12 @@
 			'description'     => __( 'The class add in cover of block.', 'sharehouse' ),
 			'default'					=> ''
 		),  
-		 
+		
 		array( 
-			'type'            => 'textarea',
+			'type'            => 'textarea_html', 
 			'heading'         => __( 'What is the description to display in block?', 'sharehouse' ),
-			'param_name'      => 'block_description',
-			'value'           => '10',
-			'description'     => __( 'This is the description to display in block', 'sharehouse' ),
-			'default'					=> '10'
+			'param_name'      => 'content', 
+			'value'						=> '',
 		),
 	); 
 	vc_map(array( 

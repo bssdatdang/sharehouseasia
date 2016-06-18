@@ -25,7 +25,7 @@
 							$label = $tax->attribute_label ? $tax->attribute_label : $tax->attribute_name; ?>
 						<div class="condition-item"> 
 							<input type="checkbox" name="condition_field[]" 
-							<?php if (in_array($attribute_taxonomy_name, $condition_data, true)) {
+							<?php if (!empty($condition_data) && in_array($attribute_taxonomy_name, $condition_data, true)) {
 								echo ' checked=true ';
 							}?>
 							value="<?php echo esc_attr( $attribute_taxonomy_name )?>"> 

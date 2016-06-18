@@ -1,10 +1,10 @@
 <?php 
-	$block_title = empty($atts['block_title']) ? '' : $atts['block_title'];
+	$block_title = empty($atts['block_title']) ? '' : $atts['block_title']; 
 	$extra_class = empty($atts['extra_class']) ? 'event' : 'event '.$atts['extra_class'];
 	$block_number = (empty($atts['block_number']) && !is_numeric($atts['block_number'])) ? '10': $atts['block_number'];
 	$block_offset = (empty($atts['block_offset']) && !is_numeric($atts['block_offset'])) ? '0': $atts['block_offset'];
 	$block_full = empty($atts['block_full']) ? false : true;
-	$sort_by = empty($atts['sort_by']) ? '0s' : $atts['sort_by']; 
+	$sort_by = empty($atts['sort_by']) ? '0' : $atts['sort_by']; 
 
 	$orderby = Helper_Controller::get_sort_by($sort_by);
 	$args = array(
@@ -25,10 +25,17 @@
 <!--Start Box Event-->
 <div class="<?php echo esc_attr($extra_class) ?> box" >
 	<div class="box-inner panel panel-default"> 
-		<?php if (!empty($block_title)):?> 
-			<div class="panel-heading  wow fadeIn <?php if($block_full) echo 'container' ?>" data-wow-duration="0.7s" data-wow-delay="700ms">
-				<h3 class="panel-title"><?php echo esc_html($atts['block_title']) ?></h3>
-			</div>
+		<?php if (!empty($block_title)):?>  
+			<div class="panel-heading  text-center wow fadeIn <?php if($block_full) echo 'container' ?>" data-wow-duration="0.7s" data-wow-delay="700ms">
+				<div class="row">
+					<div class="col-md-8 col-md-offset-2 col-lg-8 col-lg-offset-2 text-center">
+
+						<h3 class="panel-title"><?php echo esc_html($block_title) ?></h3>
+						<p> <?php echo $content; ?> 
+						</p>
+					</div>
+				</div>
+			</div> 
 		<?php endif; ?>
 		<div class="panel-body <?php if($block_full) echo 'container' ?>">
 			<div class="row">

@@ -1,6 +1,5 @@
 <?php  
-	$orderby = Helper_Controller::get_sort_by();
-	$categories = Helper_Controller::get_category('service_cat');
+	$orderby = Helper_Controller::get_sort_by(); 
 	$params = array( 
 		array( 
 			'type'            => 'textfield',
@@ -15,8 +14,33 @@
 			'heading'     => __( 'What is the title color?', 'sharehouse' ),
 			'param_name'  => 'color_title',
 			'value'       => '',
-			'description' => __( 'Choose block title color.', 'sharehouse' )
+			'description' => __( 'Choose block title color.', 'sharehouse' ),
+			'default'			=> '#000000'
 		),  
+		array(
+			'type'        => 'colorpicker',
+			'heading'     => __( 'What is the background color?', 'sharehouse' ),
+			'param_name'  => 'color_bg',
+			'value'       => '',
+			'description' => __( 'Choose block background color.', 'sharehouse' ),
+			'default'			=> '#000000'
+		),  
+		array(
+			'type'        => 'colorpicker',
+			'heading'     => __( 'What is the text color?', 'sharehouse' ),
+			'param_name'  => 'color_text',
+			'value'       => '',
+			'description' => __( 'Choose block text color.', 'sharehouse' ),
+			'default'			=> '#000000'
+		),  
+		array( 
+			'type'            => 'attach_image',
+			'heading'         => __( 'What is the image for block background?', 'sharehouse' ),
+			'param_name'      => 'bg_image',
+			'value'           => '',
+			'description'     => __( 'This is the image for block background.', 'sharehouse' ),
+			'default'					=> ''
+		),   
 		array( 
 			'type'            => 'textfield',
 			'heading'         => __( 'How many number to display?', 'sharehouse' ),
@@ -54,36 +78,11 @@
 			'param_name'			=> 'sort_by',
 			'value'						=> $orderby,
 			'description'			=> __( 'Choose criteria to display.', 'sharehouse' )
-		),
-
-		array(
-			'type' => 'param_group',
-			'heading' => __( 'Category', 'sharehouse' ),
-			'param_name' => 'category_list',
-			'params' => array(
-				array(
-					'type' => 'dropdown',
-					'admin_label' => true,
-					'heading' => __( 'Add Category', 'sharehouse' ),
-					'param_name' => 'id',
-					'value'       => $categories,
-					'description' => __( 'Choose special category to filter', 'sharehouse'  )
-				),
-			),
-			'value'       => '',
-			'callbacks'   => array(
-				'after_add' => 'vcChartParamAfterAddCallback'
-			),
-			'description' => __( 'Default no filter by category.', 'sharehouse' ),
-			'group' => 'Filter'
 		), 
 		array( 
-			'type'            => 'textarea_raw_html',
+			'type'            => 'textarea_html', 
 			'heading'         => __( 'What is the description to display in block?', 'sharehouse' ),
-			'param_name'      => 'block_description',
-			'value'           => '10',
-			'description'     => __( 'This is the description to display in block', 'sharehouse' ),
-			'default'					=> '10'
+			'param_name'      => 'content',
 		),
 	); 
 	vc_map(array( 

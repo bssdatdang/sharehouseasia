@@ -89,6 +89,7 @@ class Helper_Controller
 				'Random Posts'             => 'random_posts',
 				'Most Commented'           => 'comment_count',
 				'Popular'                  => 'popular',
+				'From start'               => 'start',
 			);
 		}
 		switch ($sort) {
@@ -98,16 +99,19 @@ class Helper_Controller
 					'order '	=> 'DESC'
 					);
 				break;
+			case 'start':
+				return array(
+					'orderby' => array( 'ID' =>'ASC')
+					);
+				break;
 			case 'az_order':
 				return array(
-					'orderby' => 'title',
-					'order '	=> 'ASC'
+					'orderby' => array( 'title' =>'ASC') 
 					);
 				break;
 			case 'za_order':
 				return array(
-					'orderby' => 'title',
-					'order '	=> 'DESC'
+					'orderby' => array( 'title' =>'DESC') 
 					);
 				break;
 			case 'random_posts':
