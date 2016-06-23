@@ -78,9 +78,10 @@ class Helper_Controller
 	}
 
 	public static function get_sort_by($sort = ''){ 
+
 		if (empty($sort)) {
 			return array(
-				'- Latest -'               => '0',
+				'- Latest -'               => 'all',
 				'A -> Z'                   => 'az_order',
 				'Z -> A'                   => 'za_order',
 				'Random posts today'       => 'random_today',
@@ -91,9 +92,10 @@ class Helper_Controller
 				'Popular'                  => 'popular',
 				'From start'               => 'start',
 			);
-		}
+		} 
+
 		switch ($sort) {
-			case '0':
+			case 'all':
 				return array(
 					'orderby' => 'ID',
 					'order '	=> 'DESC'
@@ -243,6 +245,7 @@ class Helper_Controller
 			'bs_sharehouse_location'			=> 'location',
 			'bs_sharehouse_service'				=> 'service',
 			'bs_sharehouse_event'					=> 'event',
+			'bs_sharehouse_sh_posts'			=> 'sh_posts',
 			'bs_sharehouse_register'			=> 'register'
 			);
 	}

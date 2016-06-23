@@ -1249,3 +1249,94 @@
   display: block;
   font-size: 100%;
 }
+
+
+/******/
+.sh-posts .post-item a {
+  text-decoration: none;
+  float: left;
+  width: 100%;
+  padding: 10px;
+  font-size: 1.4em;
+  cursor: pointer;
+}
+.sh-posts .post-item.post-list-1 a{
+  color: #000;
+  padding: 10px 10px;
+  float: left;
+  width: 100%;
+  border-bottom: 1px dotted;
+  text-decoration: none;
+  cursor: pointer; 
+}
+
+.sh-posts .post-item.post-list-1 a:hover{
+  color: #fff;
+  background: rgba(0, 0, 0, 0.18);
+}
+
+.sh-posts .col-md-12:last-child .post-item.post-list-1 a{
+  border-bottom: 0;
+}
+
+.sh-posts .post-item.post-list-2 {
+  border-bottom: 1px dotted;
+  padding: 10px; 
+}
+.sh-posts .post-item.post-list-2 img{
+  width: 100%;
+  max-height: 100px;
+}
+.sh-posts .post-item.post-list-2 .post-info a {
+  color: #d6d6d6; 
+  padding: 0;
+}
+
+.sh-posts .post-item.post-list-2 .post-info a:hover {
+  color: #ffffff;
+}
+.sh-posts .post-item.post-list-3 .post-info a:hover {
+  color: #ffffff;
+}
+.sh-posts .post-item.post-list-2 .post-info p {
+  color: #fff;
+  opacity: .8;
+}
+
+.sh-posts .post-item.post-list-3 {
+  float: left;
+  width: 100%;
+  padding: 10px;
+}
+.sh-posts .post-item.post-list-3 .post-thumbnail{
+  float: left;
+  width: 30%;
+  max-height: 100px;
+  overflow: hidden;
+}
+
+.sh-posts .col-md-12:first-child .post-item.post-list-3 {
+  border-bottom: 1px dotted;
+}
+.sh-posts .col-md-12:first-child .post-item.post-list-3 .post-thumbnail{
+  width: 100%; 
+  max-height: 180px;
+  overflow: hidden;
+}
+
+.sh-posts .col-md-12:first-child .post-item.post-list-3 .post-info{
+  width: 100%; 
+}
+.sh-posts .post-item.post-list-3 .post-info{
+  float: left;
+  width: 70%;
+}
+
+.sh-posts .post-item.post-list-3 .post-info a{ 
+  color: #d6d6d6;
+}
+
+.sh-posts .post-item.post-list-3 .post-thumbnail img{
+  float: left;
+  width: 100%;
+}

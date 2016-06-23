@@ -1,6 +1,15 @@
-<?php get_header() ?>
+<?php get_header();
+
+$post_id = get_the_ID();
+
+$_fullbox = get_post_meta( $post_id, '_fullbox', false );
+$_fullbox = $_fullbox? 'container' : '';
+
+
+
+?>
   <!--/Content of page-->
-  <div class="content ">
+  <div class="content <?=$_fullbox?> ">
     <?php 
       while (have_posts()): the_post();  
         // Include the page content template.

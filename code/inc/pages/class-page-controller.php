@@ -62,6 +62,11 @@ class Page_Controller   extends Helper_Controller
 		if (!isset($nonce_code)) {
 			return;
 		}
+		if( wp_verify_nonce( $nonce_code, 'save_page_field' ) ) {
+			$_fullbox = sanitize_text_field( $_POST['_fullbox'] );
+			update_post_meta( $post_id, '_fullbox', $_fullbox );
+		}
+
 		if( wp_verify_nonce( $nonce_code, 'save_client_field' ) ) {
 			$link_client = sanitize_text_field( $_POST['link_client'] );
 			update_post_meta( $post_id, '_link_client', $link_client );

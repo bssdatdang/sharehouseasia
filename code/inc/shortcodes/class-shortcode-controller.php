@@ -71,6 +71,30 @@ class Shortcode_Controller extends Helper_Controller
 		$atts['random_class'] = 'event_'.$this->make_id();
 		$atts['extra_class']  .= ' '.$atts['random_class'];
 		return $this->render('event',array('atts'=>$atts, 'content' => $content), true);
+	} 	
+
+	public function sh_posts( $atts, $content = null ) 
+	{   
+		$default = array( 
+			'block_title'				=> __( 'Posts List', 'sharehouse' ),  
+			'color_title'				=> '',
+			'color_bg'					=> '',  
+			'color_text'				=> '',  
+			'post_type'					=> '',  
+			'show_type'					=> '',  
+			'column_offset'			=> '',  
+			'block_number'			=> '',  
+			'block_offset'			=> '',  
+			'block_full'				=> '',    
+			'extra_class'				=> '',
+			'sort_by'						=> ''
+		); 
+
+		$atts 								= wp_parse_args( $atts, $default );  
+		$atts['id'] 					= $this->make_id();
+		$atts['random_class'] = 'posts-list-'.$this->make_id();
+		$atts['extra_class']  .= ' '.$atts['random_class'];
+		return $this->render('sh_posts',array('atts'=>$atts, 'content' => $content), true);
 	} 
 	
 	public function service( $atts, $content = null ) 

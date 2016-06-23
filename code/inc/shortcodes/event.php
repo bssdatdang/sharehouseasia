@@ -46,7 +46,7 @@
 			'heading'         => __( 'How many number to display?', 'sharehouse' ),
 			'param_name'      => 'block_number',
 			'value'           => '10',
-			'description'     => __( 'This is number client to display in block.', 'sharehouse' ),
+			'description'     => __( 'This is number event to display in block.', 'sharehouse' ),
 			'default'					=> '10'
 		),   
 		array( 
@@ -54,7 +54,7 @@
 			'heading'         => __( 'How many number to start?', 'sharehouse' ),
 			'param_name'      => 'block_offset',
 			'value'           => '0',
-			'description'     => __( 'This is number client to start in block.', 'sharehouse' ),
+			'description'     => __( 'This is number event to start in block.', 'sharehouse' ),
 			'default'					=> '0'
 		),  
 		  

@@ -25,7 +25,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <a href="index.html" class="navbar-brand img-logo">
+        <a title="<?php bloginfo('name'); ?>" href="<?php bloginfo('url'); ?>" class="navbar-brand img-logo">
           <?php get_header_logo()?> 
         </a>
       </div>

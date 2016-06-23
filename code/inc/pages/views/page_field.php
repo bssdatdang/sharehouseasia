@@ -1,3 +1,9 @@
+<?php
+wp_nonce_field( 'save_page_field', 'nonce_code' ); 
+$post_id = $post->ID;
+$_fullbox = get_post_meta( $post_id, '_fullbox', false );
+$_fullbox = $_fullbox? 'checked' : '';
+?>
 <div class="tab-panel shw-mbox shw-mbox-active-page-demo" >
 	<ul class="tab-list">
 		<li class="active">
@@ -15,11 +21,11 @@
 				<table class="form-table"> 
 					<tr>
 						<th scope="row">
-							<div><?php _e( 'Header Left Content', 'sharehouse' );?></div>
+							<div><?php _e( 'Display Full/Box? ', 'sharehouse' );?></div>
 							<p class="description" ><?php __( 'Enabled/Disabled content in header top.', 'sharehouse' );?></p>
 						</th>
 						<td class="row">
-							a
+							<input type="checkbox" name="_fullbox" <?=$_fullbox?> />
 						</td>
 					</tr>
 				</table>
