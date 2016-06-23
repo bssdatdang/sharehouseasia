@@ -25,8 +25,11 @@ jQuery(document).ready(function($) {
 		
 		t = t.replace(/{{row_index}}/g, r.length);
 		$('.service-table tbody').append(t);
-	});
+	}); 
 
+    $('._event_date').datepicker({dateFormat: 'dd/mm/yy' });  
+
+    
 });
 
 

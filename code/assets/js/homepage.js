@@ -82,7 +82,7 @@
   $('.slider-for').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true ,
     fade: true,
     asNavFor: '.slider-nav'
   });
@@ -222,5 +222,6 @@ $('.images-slider-nav').slick({
     root.find('.sub-menu:visible').hide();
   });
   new WOW().init();
+  
 })(jQuery);
  

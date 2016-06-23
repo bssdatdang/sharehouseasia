@@ -1,0 +1,72 @@
+.event-detail {
+  color: #000000;
+  padding: 50px 0;
+}
+.event-detail-title {
+  font-size: 4em;
+  padding: 20px 0;
+}
+.note-info-block {
+  width: 100%;
+}
+.note-info-block label { 
+  background: transparent;
+  padding: 5px;
+  font-size: 16px;
+}
+.note-info-block label.label-info{
+  text-transform: uppercase;
+}
+
+.widget-price {
+  margin-top: 10px;
+}
+.widget-price strong{
+  font-size: 5em;
+  width: 100%;
+  color: #fff;
+  float: left;
+  padding: 10px;
+  text-align: center;
+  background: #242c42;
+}
+.widget-price .widget-content {
+  border: 1px solid;
+  padding: 10px;
+  float: left;
+  width: 100%;
+}
+.widget-content > ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+.widget-content >ul >li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  padding: 10px;
+  border-bottom: 1px solid;
+}
+.widget-content >ul >li:last-child{
+  border-bottom: 0;
+}
+.widget-content >ul >li > span, .widget-content >ul >li > label {
+  font-size: 16px;
+}
+.widget-content .coutdownTimer {
+  width: 100%;
+  margin: 15px 0;
+}
+.widget-content .coutdownTimer span {
+  background: #242c42; 
+} 
+
+.widget-content .btn {
+  display: block;
+  margin: auto;
+}
+.widget-content .btn i {
+  color: #fff;
+  padding: 2px 5px;
+}

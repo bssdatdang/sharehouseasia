@@ -164,10 +164,72 @@ class Helper_Controller
 					'order '	=> 'DESC'
 					);
 				break;
-		}
-		
+		}	
 	}
 
+	public static function  complete_registration() {
+	    global $reg_errors, $username, $password, $email, $first_name, $last_name;
+	    if ( 1 > count( $reg_errors->get_error_messages() ) ) {
+	        $userdata = array(
+	        'user_login'    =>   $username,
+	        'user_email'    =>   $email,
+	        'user_pass'     =>   $password, 
+	        'first_nLogame'    =>   $first_name,
+	        'last_name'     =>   $last_name, 
+	        );
+	        $user = wp_insert_user( $userdata );
+	        return 'Registration complete. Goto <a href="' . get_site_url() . '/wp-login.php">login page</a>.';   
+	    } 
+	    return '';
+	}
+
+	public static function  registration_validation( $username, $password, $confirm, $email, $first_name, $last_name )  {
+
+	  global $reg_errors;
+	  $reg_errors = new WP_Error;
+	  $u = '';
+	  $p = '';
+	  $e = '';
+
+	  if ( 4 > strlen( $username ) )
+	  	$u = 'Username too short. At least 4 characters is required. <br/>'; 
+	  if ( username_exists( $username ) )
+	  	$u .= 'Sorry, that username already exists!<br/>';
+
+	  if ( ! validate_username( $username ) ) {
+	    $u .= 'Sorry, the username you entered is not valid<br/>';
+	  }
+	  if ( 5 > strlen( $password ) ) {
+	    $p .= 'Password length must be greater than 5. <br/>';
+	  } 
+	  
+	  if ( $password != $confirm ) {
+	  	$reg_errors->add('confirm', 'Password not match'); 
+	  } 
+
+	  if ( !is_email( $email ) ) {
+	    $e .= 'Email is not valid. <br/>';
+	  } 
+
+	  if ( email_exists( $email ) ) {
+	    $e .= 'Email Already in use. <br/>';
+	  }
+
+	  if (!empty($u)) {
+	  	$reg_errors->add('username', $u);
+	  }  
+	  if (!empty($p)) {
+	  	$reg_errors->add('password', $p);
+	  }  
+	  if (!empty($e)) {
+	  	$reg_errors->add('email', $e);
+	  }
+
+	  if ( is_wp_error( $reg_errors ) ) {
+	    return false;
+	  }
+	  return true;
+	}
 
 	public static function get_posts($args = array()){
 		return get_posts( $args );
@@ -180,7 +242,8 @@ class Helper_Controller
 			'bs_sharehouse_testimonials' 	=> 'testimonials',
 			'bs_sharehouse_location'			=> 'location',
 			'bs_sharehouse_service'				=> 'service',
-			'bs_sharehouse_event'					=> 'event'
+			'bs_sharehouse_event'					=> 'event',
+			'bs_sharehouse_register'			=> 'register'
 			);
 	}
 

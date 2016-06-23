@@ -144,7 +144,9 @@ function sharehouse_scripts() {
 	wp_enqueue_style( 'sharehouse-font-awesome', SHAREHOUSE_THEME_ASSETS_URI.'/css/font-awesome.min.css' );
 	wp_enqueue_style( 'sharehouse-animate', SHAREHOUSE_THEME_ASSETS_URI.'/css/animate.min.css' );
 	wp_enqueue_style( 'sharehouse-datepicker', SHAREHOUSE_THEME_ASSETS_URI.'/css/daterangepicker.css' ); 
+	wp_enqueue_style( 'sharehouse-jquery-countdown-css', SHAREHOUSE_THEME_ASSETS_URI.'/css/jquery.countdown.css' );
 	wp_enqueue_style( 'sharehouse-homepage', SHAREHOUSE_THEME_ASSETS_URI.'/css/homepage.css' ); 
+	wp_enqueue_style( 'sharehouse-event', SHAREHOUSE_THEME_ASSETS_URI.'/css/event.css' );
 	wp_enqueue_style( 'sharehouse-responsive', SHAREHOUSE_THEME_ASSETS_URI.'/css/responsive.css' );
 
 	// Theme javascript. 
@@ -156,6 +158,8 @@ function sharehouse_scripts() {
  	wp_enqueue_script( 'sharehouse-moment-min', SHAREHOUSE_THEME_ASSETS_URI . '/js/moment.min.js', array('jquery'), '', true );
  	wp_enqueue_script( 'sharehouse-slick-min', SHAREHOUSE_THEME_ASSETS_URI . '/js/slick.min.js', array('jquery'), '', true ); 
  	wp_enqueue_script( 'sharehouse-wow-min', SHAREHOUSE_THEME_ASSETS_URI . '/js/wow.js', array('jquery'), '', true );
+ 	wp_enqueue_script( 'sharehouse-jquery-plugin-min', SHAREHOUSE_THEME_ASSETS_URI . '/js/jquery.plugin.min.js', array('jquery'), '', true );
+ 	wp_enqueue_script( 'sharehouse-countdown', SHAREHOUSE_THEME_ASSETS_URI . '/js/countdown.min.js', array('jquery'), '', true );
  	wp_enqueue_script( 'sharehouse-homepage', SHAREHOUSE_THEME_ASSETS_URI . '/js/homepage.js', array('jquery'), '', true );
  
 }
@@ -163,7 +167,13 @@ function sharehouse_scripts() {
 function sharehouse_admin_scripts() {  
 	wp_enqueue_style( 'sharehouse-admin', SHAREHOUSE_THEME_ASSETS_URI.'/css/admin.css' ); 
 	wp_enqueue_style( 'sharehouse-font-awesome', SHAREHOUSE_THEME_ASSETS_URI.'/css/font-awesome.min.css' ); 
-	wp_enqueue_script( 'sharehouse-admin', SHAREHOUSE_THEME_ASSETS_URI . '/js/admin.js',array('jquery') ,'', true );
+	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'jquery-ui-core' );
+
+	wp_enqueue_style( 'sharehouse-datepicker', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/base/jquery-ui.css' );	 
+
+	wp_enqueue_script( 'jquery-ui-datepicker');
+	wp_enqueue_script( 'sharehouse-admin', SHAREHOUSE_THEME_ASSETS_URI . '/js/admin.js',array('jquery') ,'', true );  
 }
 add_action( 'wp_enqueue_scripts', 'sharehouse_scripts' );
 

@@ -20,6 +20,7 @@ class Page_Controller   extends Helper_Controller
 		add_meta_box( 'sharehouse_testimonial', __('Testimonial Settings','sharehouse'), array( $this, 'sharehouse_testimonial_field'),'house_testimonial');
 		add_meta_box( 'sharehouse_service', __('Service Settings','sharehouse'), array( $this, 'sharehouse_service_field'),'house_service');
 		add_meta_box( 'sharehouse_condition', __('House Conditions','sharehouse'), array( $this, 'sharehouse_condition_field'),'product');
+		add_meta_box( 'sharehouse_event', __('Event Settings','sharehouse'), array( $this, 'sharehouse_event_field'),'house_event');
 	}
 
 	public function sharehouse_page_setting_field($post){
@@ -38,6 +39,9 @@ class Page_Controller   extends Helper_Controller
 	}
 	function sharehouse_condition_field($post){
 		return $this->render('condition_field',array('post' =>  $post)); 
+	}
+	function sharehouse_event_field($post){
+		return $this->render('event_field',array('post' =>  $post)); 
 	}
 
 
@@ -72,6 +76,11 @@ class Page_Controller   extends Helper_Controller
 			$service_field = $_POST['service_field'];
 			$service_data  = json_encode($service_field);  
 			update_post_meta( $post_id, '_service_data', $service_data );
+		}
+		if( wp_verify_nonce( $nonce_code, 'save_event_field' ) ) {
+			$save_event_field = $_POST['event_field'];
+			$save_event_field  = json_encode($save_event_field);  
+			update_post_meta( $post_id, '_event_data', $save_event_field );
 		}
  
 	}

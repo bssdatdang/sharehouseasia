@@ -134,6 +134,24 @@ class Shortcode_Controller extends Helper_Controller
 		$atts['extra_class']  .= ' '.$atts['random_class'];
 		return $this->render('location',array('atts'=>$atts, 'content' => $content), true);
 	} 
+
+	public function register( $atts, $content = null ) 
+	{  
+		$default = array( 
+			'block_title'				=> __( 'Register', 'sharehouse' ),
+			'color_text'				=> '', 
+			'color_bg'					=> '',  
+			'block_small'				=> '',   
+			'block_full'				=> '',   
+			'extra_class'				=> ''
+		); 
+
+		$atts 								= wp_parse_args( $atts, $default );  
+		$atts['id'] 					= $this->make_id();
+		$atts['random_class'] = 'register_'.$this->make_id();
+		$atts['extra_class']  .= ' '.$atts['random_class'];
+		return $this->render('register',array('atts'=>$atts, 'content' => $content), true);
+	} 
 	
 	public function custom_css($atts = false){
 		if (is_array($atts)) {

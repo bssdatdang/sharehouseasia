@@ -16,7 +16,7 @@
   <?php wp_head() ?>
 </head>
 
-<body>
+<body <?php body_class( $class ); ?>>
   <div class="sharehouse-site">
     <header>
       <div class="navbar-header">

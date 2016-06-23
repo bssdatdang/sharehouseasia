@@ -118,7 +118,7 @@ class Posttype_Controller extends Helper_Controller
 				'show_in_nav_menus'			=> false,
 				'exclude_from_search'		=> true, 
 				'menu_icon'							=> 'dashicons-list-view',
-				'supports'							=> array( 'title', 'page-attributes', 'thumbnail','excerpt','comments','editor' ),
+				'supports'							=> array( 'title', 'thumbnail','excerpt','comments','editor' ),
 				'labels'								=> array(
 					'name'									=> __( 'All Events',                    'sharehouse' ),
 					'singular_name'					=> __( 'Event',													'sharehouse' ),

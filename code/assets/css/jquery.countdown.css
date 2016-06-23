@@ -1,0 +1,43 @@
+/* jQuery Countdown styles 2.0.0. */
+.is-countdown {
+  border: 1px solid #ccc;
+  background-color: transparent;
+  float: left;
+}
+.countdown-rtl {
+  direction: rtl;
+}
+.countdown-holding span {
+  color: #fff;
+}
+.countdown-row {
+  clear: both;
+  width: 100%;
+  padding: 0px 2px;
+  text-align: center;
+  display: flex;
+}
+ 
+.countdown-section {
+  display: block;
+  float: left;
+  font-size: 75%;
+  text-align: center;
+  color: #fff;
+  border-left: 1px solid ;
+  flex: 1;
+  padding: 10px ;
+}
+.coutdownTimer .countdown-section:first-child {
+  border-left: 0;
+}
+.countdown-amount {
+  font-size: 200%;
+}
+.countdown-period {
+    display: block;
+}
+.countdown-descr {
+  display: block;
+  width: 100%;
+}

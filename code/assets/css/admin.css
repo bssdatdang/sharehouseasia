@@ -145,3 +145,49 @@
 .form-table.service-table td{
 	padding: 5px 10px 10px;
 }
+#sharehouse_event .inside {
+  margin: 0;
+  padding: 0;
+}
+.google-map-event{
+  width: 100%;
+  height: 300px;
+}
+#_event_address {
+  background-color: #fff;
+  font-family: Roboto;
+  font-size: 15px;
+  font-weight: 300;  
+  text-overflow: ellipsis;
+  width: 50%;
+  left: 150px !important ;
+}
+
+.options_group,.form-field  {
+  width: 100%;
+  float: left;
+}
+.form-field label {
+  float: left;
+  width: 150px;
+  padding: 0; 
+}
+
+.form-field input[type=text], .form-field input[type=number] {
+  width: 50%;
+} 
+
+.user-list {
+  width: 100%;
+  float: left;
+}
+.user-list .user-info {
+  float: left;
+  min-width: 100px;
+  width: 25%;
+  padding: 5px;
+}
+
+.user-list .user-info .user-inner {
+  text-align: center;
+}
