@@ -180,16 +180,14 @@ $('.images-slider-nav').slick({
   $(window).scroll(function() {
     if ($(this).scrollTop() > 200) {
       $('.backtop').fadeIn(200);
+      $('body').addClass('body-scroll');
     } else {
       $('.backtop').fadeOut(200);
+      $('body').removeClass('body-scroll');
     }
   });
   $(window).load(function() {
-    if ($(this).scrollTop() > 200) {
-      $('.backtop').fadeIn(200);
-    } else {
-      $('.backtop').fadeOut(200);
-    }
+    $(window).trigger('scroll');
   });
 
   // Animate the scroll to top
@@ -223,5 +221,6 @@ $('.images-slider-nav').slick({
   });
   new WOW().init();
   
+
 })(jQuery);
  

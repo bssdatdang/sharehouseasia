@@ -32,13 +32,21 @@ $place      = isset($event_obj->place) &&  !empty($event_obj->place) ?    $event
 $present    = isset($event_obj->present) &&  !empty($event_obj->present) ?  $event_obj->present : '';
 $address    = isset($event_obj->address) && !empty($event_obj->address) ? $event_obj->address : ''; 
 
+
+$dateArr = explode('/',$date);
+$date = str_replace('/', '-', $date); 
+$now = new DateTime(); 
+
+$dateArr[0] = isset($dateArr[0]) ? $dateArr[0]: $now->format('d');
+$dateArr[1] = isset($dateArr[1]) ? $dateArr[1]: $now->format('m');
+$dateArr[2] = isset($dateArr[2]) ? $dateArr[2]: $now->format('Y');
 ?>
 
 <script type="text/javascript">
   
   jQuery(document).ready(function(){
-    var newYear = new Date(); 
-    newYear = new Date('<?php echo date('d,m,Y',strtotime($date)) ?>'); 
+    var newYear = new Date();  
+    newYear = new Date(<?=$dateArr[2]?>,<?=$dateArr[1]?>,<?=$dateArr[0]?>); 
     jQuery('#coutdownTimer').countdown({until: newYear, format: 'YOD'});
   });
 </script>
@@ -81,8 +89,8 @@ $address    = isset($event_obj->address) && !empty($event_obj->address) ? $event
                   <label>Status: </label>
                   <span class="value">
                     <?php 
-                    $now = new DateTime();  
-                      if (strtotime(date('d/m/Y',strtotime($date))) > $now->getTimestamp()) {
+                       
+                      if (strtotime($date) > $now->getTimestamp()) {
                         echo __('Comming Soon', 'sharehouse');
                       }else{
                         echo __('Passed', 'sharehouse');

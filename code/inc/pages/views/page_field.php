@@ -2,7 +2,7 @@
 wp_nonce_field( 'save_page_field', 'nonce_code' ); 
 $post_id = $post->ID;
 $_fullbox = get_post_meta( $post_id, '_fullbox', false );
-$_fullbox = $_fullbox? 'checked' : '';
+$_fullbox = $_fullbox[0]? 'checked' : '';
 ?>
 <div class="tab-panel shw-mbox shw-mbox-active-page-demo" >
 	<ul class="tab-list">

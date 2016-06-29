@@ -3,7 +3,7 @@
 $post_id = get_the_ID();
 
 $_fullbox = get_post_meta( $post_id, '_fullbox', false );
-$_fullbox = $_fullbox? 'container' : '';
+$_fullbox = $_fullbox[0]? 'container' : '';
 
 
 

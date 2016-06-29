@@ -958,6 +958,8 @@
  .sh-widget ul {
    list-style: none;
    padding: 0;
+   float: left;
+   width: 100%;
  }
  
  .sh-widget ul li {
@@ -1339,4 +1341,82 @@
 .sh-posts .post-item.post-list-3 .post-thumbnail img{
   float: left;
   width: 100%;
+}
+.box-recent-posts {
+   padding-top: 20px;
+   float: left;
+   width: 100%;
+}
+
+.box-recent-posts .box-heading {
+   float: left;
+   width: 100%;
+   text-transform: uppercase;
+   font-size: 1.3em;
+   margin-bottom: 25px;
+   color: #a4a4a4;
+}
+.box-recent-posts .box-category ul{
+   float: left;
+   width: 100%;
+   padding: 0;
+}
+.box-recent-posts .box-category ul li{
+   float: left;
+   width: 100%;
+   padding: 10px 0;
+   border-bottom: 1px dotted;
+}
+
+.sh-widget .box-category ul li {
+   margin-bottom: 0;
+}
+.box-recent-posts .box-category ul li:last-child {
+   border-bottom:0;
+}
+.box-category .right{
+   float: left;
+   margin-left: 10px ;
+   width: calc( 100% - 100px)
+}
+.box-category .left{
+   float: left ;
+   max-width: 50px;
+   max-height: 50px;
+   overflow: hidden;
+}
+.box-category .left img {
+   width: 100%;
+}
+
+.sh-post-detail {
+   color: #000;
+}
+
+
+.body-scroll header .navbar-header .navbar-brand{
+   height: 90px;
+   padding: 0 15px;
+}
+
+
+.body-scroll header {
+   position: fixed;
+   background: rgba(140, 107, 75, 0.88);
+}
+.house-item { margin-top: 15px; }
+.house-inner .info {
+   color: #000;
+}
+.house-inner .title {
+   font-size: 1.5em;
+   font-weight: bold;
+   margin-bottom: 20px;
+   display: inline-block; 
+   color: #000;
+}
+@media screen and (max-width: 600px) {
+   .body-scroll header {
+      top: 0;
+   }
 }

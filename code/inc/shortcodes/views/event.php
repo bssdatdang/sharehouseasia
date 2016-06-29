@@ -51,13 +51,13 @@
 										'offset'					=> $block_offset,
 										'tax_query'		=> array(
 											array(
-												'taxonomy'	=> 'client_cat',
+												'taxonomy'	=> 'event_cat',
 												'field'    => 'term_id',
 												'terms'    => $cate->term_id, 
 											)
 										) 
 									);
-									$events_p =  new WP_Query($args); 
+									$events_p =  new WP_Query($filter); 
 									echo '<div class="slider-category-item">';
 									if ($events_p->have_posts()):
 										while ($events_p->have_posts()) : $events_p->the_post();
@@ -116,7 +116,7 @@
 						$filter = array(
 											'post_type'				=> 'house_event',
 											'posts_per_page'	=> 4);
-						$events_p =  new WP_Query($args);
+						$events_p =  new WP_Query($filter);
 						if ($events_p->have_posts()):
 							while ($events_p->have_posts()) : $events_p->the_post();
 					?> 

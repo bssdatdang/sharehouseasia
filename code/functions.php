@@ -86,7 +86,7 @@ function sharehouse_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'Sidebar Left', 'sharehouse' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'sidebar-left',
 		'description'   => __( 'Add widgets here to appear in your sidebar left.', 'sharehouse' ),
 		'before_widget' => '<div id="%1$s" class="box %2$s">',
 		'after_widget'  => '</div>',
@@ -96,7 +96,7 @@ function sharehouse_widgets_init() {
 
 	register_sidebar( array(
 		'name'          => __( 'Sidebar Right', 'sharehouse' ),
-		'id'            => 'sidebar-2',
+		'id'            => 'sidebar-right',
 		'description'   => __( 'Add widgets here to appear in your sidebar right.', 'sharehouse' ),
 		'before_widget' => '<div id="%1$s" class="box %2$s">',
 		'after_widget'  => '</div>',
@@ -104,7 +104,25 @@ function sharehouse_widgets_init() {
 		'after_title'   => '</div>',
 	) );
 
+	register_sidebar( array(
+		'name'          => __( 'Sidebar Product', 'sharehouse' ),
+		'id'            => 'sidebar-product',
+		'description'   => __( 'Add widgets here to appear in your sidebar product.', 'sharehouse' ),
+		'before_widget' => '<div id="%1$s" class="box %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="box-heading">',
+		'after_title'   => '</div>',
+	) );
 
+	register_sidebar( array(
+		'name'          => __( 'Sidebar Event', 'sharehouse' ),
+		'id'            => 'sidebar-event',
+		'description'   => __( 'Add widgets here to appear in your sidebar event.', 'sharehouse' ),
+		'before_widget' => '<div id="%1$s" class="box %2$s">',
+		'after_widget'  => '</div>',
+		'before_title'  => '<div class="box-heading">',
+		'after_title'   => '</div>',
+	) );
 
 	for ($i=1; $i < 4; $i++) { 
 			register_sidebar( array( 
@@ -113,19 +131,19 @@ function sharehouse_widgets_init() {
 				'description'   => __( 'Add widgets here to appear in three column of footer', 'sharehouse' ),
 				'before_widget' => '<div id="%1$s" class="%2$s">',
 				'after_widget'  => '</div>',
-				'before_title'  => '<div class="widget-title">',
-				'after_title'   => '</div>',
+				'before_title'  => '<h3 class="widget-title">',
+				'after_title'   => '</h3>',
 			) );
 	}
 
 	register_sidebar( array( 
-				'name'          => sprintf(__( 'Footer Bottom', 'sharehouse' ), $i), 
-				'id'            => 'footer-'.$i, 
+				'name'          => sprintf(__( 'Footer Bottom', 'sharehouse' )), 
+				'id'            => 'footer-bottom', 
 				'description'   => __( 'Add widgets here to appear in your footer bottom', 'sharehouse' ),
-				'before_widget' => '<div id="%1$s" class="%2$s">',
+				'before_widget' => '<div id="%1$s" class="footer-bottom %2$s">',
 				'after_widget'  => '</div>',
-				'before_title'  => '<div class="widget-title">',
-				'after_title'   => '</div>',
+				'before_title'  => '<p><strong>',
+				'after_title'   => '</p></strong>',
 			) );
 } 
 
